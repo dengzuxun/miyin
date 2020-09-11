@@ -1,0 +1,28 @@
+@import './miniprogram_npm/@vant/weapp/common//index.wxss';
+
+@import './style/iconfont.wxss'
+/**app.wxss**/
+.container {
+  background: #F8F8F8;
+} 
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}

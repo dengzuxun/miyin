@@ -1,0 +1,102 @@
+<view class="container">
+	<view class="home-header">
+		<view class="home-top">
+			<view class="home-text">
+				<text>今日上新最多5000本</text>
+			</view>
+			<view class="home-tabar">
+				<swiper indicator-dots="true" autoplay="true" interval="3000" circular="true">
+					<block>
+						<swiper-item>
+							<view>
+								<image src="../../static/imgs/timg1.jpg"></image>
+							</view>
+						</swiper-item>
+						<swiper-item>
+							<view>
+								<image src="../../static/imgs/timg2.jpg"></image>
+							</view>
+						</swiper-item>
+						<swiper-item>
+							<view>
+								<image src="../../static/imgs/timg1.jpg"></image>
+							</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+		<!-- '头部结束 -->
+		<view class="home-footer">
+			<view class="home-footer-set">
+				<view>
+					<navigator url="/pages/home/appointment/appointment" open-type="navigate">
+						<image src="../../static/icons/home-title.png"></image>
+					</navigator>
+				</view>
+				<view>
+					<image src="../../static/icons/home-title1.png"></image>
+				</view>
+			</view>
+			<view class="home-footer-get">
+				<view>
+					<navigator url="/pages/my/shop/shop">
+						<view>
+							<image src="../../static/icons/jifen.png"></image>
+						</view>
+						<view>
+							<text>积分商城</text>
+						</view>
+					</navigator>
+				</view>
+				<view>
+					<navigator url="/pages/home/reel/reel" open-type="navigate">
+						<view>
+							<image src="../../static/icons/linjuan.png"></image>
+						</view>
+						<view>
+							<text>领卷中心</text>
+						</view>
+					</navigator>
+
+				</view>
+				<view>
+					<navigator url="/pages/gather/welfare/welfare" open-type="navigate">
+						<view>
+							<image src="../../static/icons/fuli.png"></image>
+						</view>
+						<view>
+							<text>福利中心</text>
+						</view>
+					</navigator>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="home-content">
+	<van-sticky>
+		<scroll-view class="typeIndex" scroll-x>
+			<view class="box">
+				<text bindtap="homeTypeclick" data-index='{{index}}' data-Id="{{item.id}}" wx:for="{{homeType}}" wx:key="index" class="{{homeTypeIndex==index?'box1':''}}">{{item.name}}</text>
+			</view>
+		</scroll-view>
+	</van-sticky>
+
+		<scroll-view>
+			<view class="essay">
+				<view class="essay-content" bindtap="articleClick" wx:for="{{homeData}}" wx:key="index">
+					<navigator url="/pages/home/article/article" open-type="navigate">
+						<view class="essay-top">
+							<text class="essay-title">{{item.name}}</text>
+							<text>{{item.title}}</text>
+						</view>
+						<view class="essay-img">
+							<image src="{{item.img}}"></image>
+						</view>
+					</navigator>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+
+</view>

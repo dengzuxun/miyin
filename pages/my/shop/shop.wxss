@@ -1,0 +1,143 @@
+
+.container{
+  background: #eee;
+}
+
+.zhao{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 150;
+
+}
+.shopselector{
+  position: relative;
+  z-index: 999;
+}
+.shop{
+  background: black;
+  height: 300rpx;
+  position:relative;
+}
+.box{
+    width: 140%;
+    height: 150rpx;
+    border: 1px solid black;
+    position: absolute;
+    left: -20%;
+    bottom: 0;
+    /* transform: translateX(50%); */
+    border-radius: 50% 50% 0 0/100% 100% 0 0;
+    border-bottom: none;
+    background: #eee;
+}
+.shop-image{
+  position: relative;
+  width: 688rpx;
+  margin: 0 auto;
+  z-index: 22;
+}
+.shop-image image{
+  width: 100%;
+  height:300rpx;
+  border-radius: 10rpx;
+}
+.shop-tabar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:10rpx;
+  font-size: 36rpx;
+}
+.shop-tabar>view{
+  width: 50%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  font-weight: 500;
+  padding: 12rpx;
+}
+
+.shop-tabar>view:nth-of-type(1){
+  border-right: 2rpx solid #eee;
+}
+.shop-tabar image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+}
+
+
+
+/* 商品列表头部 */
+.shop-content{
+  background: #fff;
+  padding-left:32rpx;
+}
+.shop-content-title{
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  padding: 20rpx 0;
+  padding-right: 13rpx;
+}
+
+.title-text>text:nth-of-type(2){
+  font-size: 17rpx;
+  color: #787878;
+  margin-left: 10rpx;
+}
+.canshop{
+  font-size: 24rpx;
+}
+.van-checkbox__label{
+  margin-left: var(--checkbox-label-margin,5rpx) !important;
+
+}
+
+.shop-list-item{
+  display: flex;
+  margin-bottom: 45rpx;
+}
+
+.shop-list-text{
+  padding-left: 37rpx;
+}
+.shop-list-text>view:nth-of-type(1){
+  margin-bottom: 32rpx;
+  font-size: 28rpx;
+}
+.shop-list-text>view:nth-of-type(2){
+  font-size: 24rpx;
+  border: 1rpx solid #F54029;
+  text-align: center;
+  color: #F54029;
+}
+.shop-list-text>view:nth-of-type(3){
+  margin-top: 96rpx;
+  font-size: 36rpx;
+  color: #F54029;
+}
+.shop-list-item{
+  position: relative;
+}
+.shop-list-item image{
+  width: 260rpx;
+  height: 260rpx;
+}
+.shop-list-btn{
+  position: absolute;
+  right: 5%;
+  bottom: 12%;
+  background: #FFEBE8;
+  border-radius: 30rpx;
+  padding: 10rpx 25rpx;
+  color: #E9353E;
+  font-size: 26rpx;
+}

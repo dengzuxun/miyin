@@ -1,0 +1,14 @@
+.logisticslist-img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.logisticslist-steps{
+  display: flex;
+  background: #fff;
+}
+.logisticslist-steps-left{
+  width: 20%;
+}
+.logisticslist-steps-right{
+  width: 80%;
+}

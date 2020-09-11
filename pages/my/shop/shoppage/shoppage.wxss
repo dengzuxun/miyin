@@ -1,0 +1,76 @@
+
+
+.shop-top{
+  padding: 10rpx 36rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.shop-img{
+  padding-bottom: 10rpx;
+}
+.shop-img image{
+  width: 100%;
+}
+.shop-integral{
+  color: #F5402A;
+  font-size: 36rpx;
+}
+.shop-number{
+  font-size: 30rpx;
+  color: #b1b1b1;
+}
+
+/*  */
+
+.shop-desc{
+  background-color: #fff;
+  padding: 35rpx;
+  font-size: 24rpx;
+  color: #272727;
+  padding-left: 40rpx;
+  padding-right: 80rpx;
+  line-height: 48rpx;
+}
+
+.shop-title{
+  font-size: 30rpx;
+  color: #121212;
+}
+
+/* tanchuceng */
+.showShop-item,.showShop-bottom{
+  display: flex;
+  font-size: 34rpx;
+}
+
+.showShop-item{
+  line-height:90rpx;
+}
+.showShop-item-img{
+  width: 25%;
+  margin-left: 30rpx;
+  margin-right: 18rpx;
+}
+
+.showShop-item-text{
+  width: 75%;
+  margin-right: 20rpx;
+}
+.showShop-item-img image{
+  width: 172rpx;
+  height: 172rpx;
+}
+.showShop-bottom{
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 80rpx;
+}
+.showShop-bottom view:nth-of-type(1){
+  width: 60%;
+}
+.showShop-bottom view:nth-of-type(2){
+  width: 40%;
+  background-color:#E3484A;
+  color: #fff;
+}

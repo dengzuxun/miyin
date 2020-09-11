@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+  "van-dropdown-item": "@vant/weapp/dropdown-item/index"  
+  },
+  "navigationBarTitleText": "积分商城",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTextStyle": "white"
+}

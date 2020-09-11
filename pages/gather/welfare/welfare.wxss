@@ -1,0 +1,65 @@
+
+
+.welfare{
+  margin:0 29rpx;
+  padding: 20rpx 0;
+}
+.welfare-list{
+  background:#fff;
+  border-radius: 20rpx;
+  padding:0 18rpx;
+  margin: 20rpx 0;
+}
+
+.list-items-img{
+  width: 20%;
+  margin-top: 20rpx;
+}
+
+.list-items-content{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.list-items-content{
+  border-bottom: 1rpx solid #F6F3F7;
+}
+
+.welfare-list-items:last-of-type .list-items-content{
+  border-bottom:0;
+}
+
+
+.welfare-list-items{
+    display: flex;
+    padding: 20rpx 0;
+}
+.welfare-list-items image{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+.list-items-text>view{
+  padding: 5rpx 0;
+}
+.list-items-btn{
+  width: 100rpx;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to right, #FFADAA , #FF928D);
+  padding: 6rpx 10rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+}
+
+
+.list-items-text view:last-of-type{
+    color: #FF938E;
+    font-size: 24rpx;
+}
+

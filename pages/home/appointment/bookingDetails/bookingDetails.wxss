@@ -1,0 +1,101 @@
+
+.booking-details-content{
+  background-color: #fff;
+}
+.booking-details-img image{
+      width: 100%;
+      height: 200rpx;
+}
+.booking-details-title{
+  font-size: 35rpx;
+}
+.booking-details-center{
+  display: flex;
+  padding: 25rpx 20rpx;
+}
+.booking-details-left{
+  width: 176rpx;
+  height: 176rpx;
+}
+.booking-details-left image{
+  width: 100%;
+  height: 100%;
+}
+.booking-details-right{
+  width: 70%;
+  padding: 10rpx 0;
+  padding-left: 20rpx;
+  font-size: 25rpx;
+}
+.booking-details-right>view{
+   padding: 8rpx 0;
+}
+.booking-details-content{
+  color: #A7A7A7;
+}
+.booking-details-next,.details-top-status{
+  color: #CC9933;
+}
+
+
+.booking-details-list{
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+
+.details-list-get{
+  display: flex;
+  padding: 15rpx 0;
+  margin: 0 25rpx;
+  font-size: 25rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+
+.details-list-icon{
+  width: 10%;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.details-list-data{
+  width: 88%;
+}
+.details-list-icon image{
+  width:50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+
+/* 订单编号 */
+
+.details-order{
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx;
+  color: #333333;
+}
+.details-order>view{
+  padding: 10rpx 0;
+}
+
+.order-btns{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25rpx;
+}
+.order-no{
+  background-color: #afafaf;
+}
+.order-code{
+  background-color: #FF928D;
+}
+.order-btns>view{
+    width: 120rpx;
+    text-align: center;
+    padding: 10rpx 25rpx;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    color: #fff;
+}
+

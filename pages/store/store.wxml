@@ -1,0 +1,22 @@
+<view class="containers">
+	<van-sticky>
+		<view class="store-serch">
+			<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+		</view>
+	</van-sticky>
+	<view class="store-content">
+		<view class="store-name">
+			<scroll-view scroll-y="true" class="store-name-scroll">
+				<view class="van-ellipsis {{index==activeIndex?'actives':''}}" data-index="{{index}}" id="{{item.id}}" wx:for="{{dataType}}" wx:key="index" bindtap="storeClick">{{item.name}}</view>
+			</scroll-view>
+		</view>
+
+		<view class="store-particulars">
+			<view bindtap="commodityParticulars" wx:for="{{chired}}" wx:key="index">
+				<image src="{{item.icon_img}}"></image>
+				<view>{{item.name}}</view>
+			</view>
+		</view>
+
+	</view>
+</view>

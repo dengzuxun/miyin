@@ -1,0 +1,96 @@
+.box{
+  height:355rpx;
+  position: relative;
+  margin-bottom: 200rpx;
+  background-image: linear-gradient(to right, #FFADAA , #FF928D);
+  text-align: center;
+}
+.integral{
+  padding-bottom: 20rpx;
+}
+
+
+.integral-numbel{
+    padding-top: 88rpx;
+    color: #fff;
+    font-size: 30rpx;
+}
+.integral-numbel view:nth-of-type(1){
+  font-size:78rpx;
+}
+.integral-tab{
+  width: 685rpx;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -150rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10rpx;
+  background: #fff;
+  text-align: center;
+}
+.integral-tab-item{
+  padding: 26rpx 26rpx;
+}
+
+
+.integral-detail{
+  display: flex;
+  justify-content: space-between;
+}
+
+.integral-list{
+  margin:0 30rpx;
+}
+
+
+.integral-list{
+  font-size: 24rpx;
+}
+.integral-detail>view{
+  /* padding: 5rpx 0; */
+  margin: 20rpx 0;
+}
+.integral-detail view:nth-of-type(1){
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.integral-detail view:nth-of-type(2){
+  padding-left:40rpx;
+  border-left: 1rpx solid #000;
+}
+
+
+/* 积分列表 */
+
+.integral-list-items{
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+  padding: 12rpx 20rpx;
+}
+
+.integral-text{
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.integral-date{
+  font-size: 20rpx;
+  color:#868686 ;
+}
+.integral-number{
+  color:#B5B5B5;
+  font-size: 38rpx;
+  line-height: 72rpx;
+}
+
+/* 弹框 */
+.dialog-btn{
+  margin: 50rpx 0;
+}
+.dialog-btn>view{
+  padding: 10rpx 0;
+}

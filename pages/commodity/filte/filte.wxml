@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="content">
+        <view class="content-text">
+          <textarea maxlength="120" placeholder="分享宝宝新鲜事..."></textarea>
+        </view>
+        <view class="content-media">
+            <view wx:if="{{imgList.length>0?false:true}}" class="media-btn" bindtap="addImg">
+                <view><image src="../../../static/icons/tianjia.png"></image></view>
+                <text>添加图片</text>
+            </view>
+            <view class="media-list" wx:for="{{imgList}}" wx:key="{{index}}">
+              <image wx:if="{{item}}" src='{{item}}'></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+<view class="container">
+	<view class="baby">
+		<view class="babyImg" wx:if="{{babyIndex==0}}">
+			<van-empty class="custom-image" image="https://img.yzcdn.cn/vant/custom-empty-image.png" description="您还没有添加宝宝资料" />
+		</view>
+
+		<!-- 宝宝内容 -->
+		<view class="baby-list">
+		<!-- 宝宝列表 -->
+			<view class="baby-item" wx:for="{{babyData}}">
+				<view class="iconfont">
+					<van-icon name="edit" bind:click="setbaby" />
+				</view>
+				<van-cell-group class="item-group">
+					<van-cell custom-class="ser" title="宝宝姓名" value="{{item.name}}" />
+					<van-cell custom-class="ser" title="宝宝性别" value="{{item.sex}}" />
+					<van-cell custom-class="sers ser" title="宝宝生日/预产期" value="{{item.date}}" />
+				</van-cell-group>
+			</view>
+		</view>
+
+		<view class="babyAdd" bindtap="addBaby">
+			<text>+ 添加宝宝资料</text>
+		</view>
+	</view>
+
+
+	<!-- 宝宝的弹窗 -->
+
+	<van-dialog use-slot title="宝宝" show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose" bind:getuserinfo="getUserInfo">
+		<van-cell-group>
+			<van-field label-class="baby-input" model:value="{{ value }}" label="宝宝姓名" placeholder="请输入姓名" border="{{ false }}" />
+			<van-field label-class="baby-input" model:value="{{ value1 }}" bindtap="setSex" label="宝宝性别" placeholder="请选择性别" border="{{ false }}" />
+			<van-field label-class="baby-input" bindtap="addDate" disabled value="{{ value2 }}" label="宝宝生日/预产期" placeholder="请选择生日" border="{{ false }}" />
+		</van-cell-group>
+	</van-dialog>
+
+
+	<!-- 宝宝性别弹窗 -->
+	<van-popup show="{{ sexShow }}" round position="bottom" custom-style="height: 40%" bind:close="onClose" z-index="9999">
+		<van-picker bind:confirm="getValues" bind:cancel="cancelSex" columns="{{ sex }}" show-toolbar default-index="{{ 1 }}" />
+	</van-popup>
+
+	<!-- 时间弹窗 -->
+	<van-action-sheet show="{{ isShowDatePicker }}" z-index="9999" title="日期选择" bind:close="closeDatePicker" bind:click-overlay="closeDatePicker">
+		<van-datetime-picker type="date" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:cancel="closeDatePicker" bind:confirm="complete" />
+	</van-action-sheet>
+
+</view>

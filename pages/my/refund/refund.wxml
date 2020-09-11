@@ -1,0 +1,13 @@
+<van-empty class="custom-image" image="https://img.yzcdn.cn/vant/custom-empty-image.png" description="">
+<view class="refund">
+  <view class="refund-title">
+    <text>线上售后功能暂未开放!</text>
+  </view>
+  <view class="refund-text">
+    <text>如需退款退货请先拨打电话咨询或者联系客服或到就近门店或当地门店咨询</text>
+  </view>
+  <view class="refund-number">
+    <text>咨询电话：12345678923</text>
+  </view>
+</view>
+</van-empty>

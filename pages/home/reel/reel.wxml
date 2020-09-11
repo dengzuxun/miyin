@@ -1,0 +1,132 @@
+<view class="container">
+	<view class="reel">
+		<view class="reel-img">
+			<image src="../../../static/imgs/timg2.jpg"></image>
+		</view>
+
+		<!-- 优惠卷 -->
+		<view class="reel-list">
+			<view class="reel-item reel-imgs">
+				<van-row>
+					<van-col span="6" offset="1">
+						<van-row><text>￥</text><text style="font-size:92rpx">10</text></van-row>
+						<van-row><text style="font-size:25rpx">满10000可用</text></van-row>
+					</van-col>
+					<van-col span="10">
+						<van-row>
+							<view style="padding:25rpx 0"><text style="font-size:40rpx">奶粉类专用卷</text></view>
+						</van-row>
+						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>2020-07-29</text></van-row>
+					</van-col>
+					<van-col span="7">
+						<view class="reel-btn"><text bindtap="getRell">立即领取</text></view>
+					</van-col>
+				</van-row>
+			</view>
+
+			<view class="reel-item reel-imgs">
+				<van-row>
+					<van-col span="6" offset="1">
+						<van-row><text>￥</text><text style="font-size:92rpx">10</text></van-row>
+						<van-row><text style="font-size:25rpx">满10000可用</text></van-row>
+					</van-col>
+					<van-col span="10">
+						<van-row>
+							<view style="padding:25rpx 0"><text style="font-size:40rpx">奶粉类专用卷</text></view>
+						</van-row>
+						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>2020-07-29</text></van-row>
+					</van-col>
+					<van-col span="7">
+						<view class="reel-btn"><text bindtap="getRell">立即领取</text></view>
+					</van-col>
+				</van-row>
+			</view>
+
+			<view class="reel-item reel-imgs">
+				<van-row>
+					<van-col span="6" offset="1">
+						<van-row><text>￥</text><text style="font-size:92rpx">10</text></van-row>
+						<van-row><text style="font-size:25rpx">满10000可用</text></van-row>
+					</van-col>
+					<van-col span="10">
+						<van-row>
+							<view style="padding:25rpx 0"><text style="font-size:40rpx">奶粉类专用卷</text></view>
+						</van-row>
+						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>2020-07-29</text></van-row>
+					</van-col>
+					<van-col span="7">
+						<view class="reel-btn"><text bindtap="getRell">立即领取</text></view>
+					</van-col>
+				</van-row>
+			</view>
+
+			<view class="reel-item reel-imgs">
+				<van-row>
+					<van-col span="6" offset="1">
+						<van-row><text>￥</text><text style="font-size:92rpx">10</text></van-row>
+						<van-row><text style="font-size:25rpx">满10000可用</text></van-row>
+					</van-col>
+					<van-col span="10">
+						<van-row>
+							<view style="padding:25rpx 0"><text style="font-size:40rpx">奶粉类专用卷</text></view>
+						</van-row>
+						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>2020-07-29</text></van-row>
+					</van-col>
+					<van-col span="7">
+						<view class="reel-btn"><text bindtap="getRell">立即领取</text></view>
+					</van-col>
+				</van-row>
+			</view>
+
+			<view class="reel-item reel-imgs">
+				<van-row>
+					<van-col span="6" offset="1">
+						<van-row><text>￥</text><text style="font-size:92rpx">10</text></van-row>
+						<van-row><text style="font-size:25rpx">满10000可用</text></van-row>
+					</van-col>
+					<van-col span="10">
+						<van-row>
+							<view style="padding:25rpx 0"><text style="font-size:40rpx">奶粉类专用卷</text></view>
+						</van-row>
+						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>2020-07-29</text></van-row>
+					</van-col>
+					<van-col span="7">
+						<view class="reel-btn"><text bindtap="getRell">立即领取</text></view>
+					</van-col>
+				</van-row>
+			</view>
+
+		</view>
+
+
+
+		<!-- 优惠卷结束 -->
+
+
+		<!--弹框  -->
+		<van-dialog use-slot bind:confirm show="{{ show }}" confirmButtonText="去商城逛一逛" theme="round-button" bind:confirm="storeClick" message="">
+			<view class="reel-dialog">
+				<image src="../../../static/imgs/timg1.jpg"></image>
+
+			</view>
+			<view class="reel-dialog-text">
+				<view style="font-size:45rpx;padding-bottom:10rpx">恭喜您领取优惠券成功</view>
+				<view style="color:#eee;padding-bottom:30rpx">可以在我的—优惠券中查看</view>
+			</view>
+			<view class="icon" bindtap="showClick">
+				<van-icon size="44rpx" name="cross" />
+			</view>
+		</van-dialog>
+
+		<!--弹框结束  -->
+		<!-- 我的优惠券按钮 -->
+		<view class="reelMy">
+			<navigator open-type="navigate" url="/pages/Myreel/Myreel">
+				<view class="reelMy-btn">
+					<text>我的优惠券</text>
+				</view>
+			</navigator>
+		</view>
+		<!-- 我的优惠券结束 -->
+	</view>
+</view>

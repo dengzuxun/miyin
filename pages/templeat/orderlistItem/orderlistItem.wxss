@@ -1,0 +1,77 @@
+.orderlistItems-list-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  background: #fff;
+  padding-left: 22rpx ;
+  padding-right: 50rpx ;
+}
+page{
+  height: 100%;
+}
+.container{
+  height: 100%;
+  background: #FAFAFA;
+}
+
+.orderlist{
+  background:#FAFAFA;
+}
+.order-commodity-introduce{
+  padding: 20rpx 0;
+}
+
+.orderlistItems-date{
+  font-size: 22rpx;
+}
+.orderlistItems-status{
+  font-size: 26rpx;
+  color: #E34749;
+}
+
+.order-commodity-introduce image{
+  width: 152rpx;
+  height: 152rpx;
+}
+.order-commodity-introduce>view{
+padding: 20rpx;
+}
+
+.orderlistItems-list{
+  margin-bottom:20rpx ;
+}
+
+
+.orderlistItems-list-content,.orderlistItems-list-item{
+  padding-left: 22rpx ;
+  padding-right: 50rpx ;
+}
+.commodity-introduce-number{
+   float: right;
+}
+.commodity-introduce-text{
+  font-size: 28rpx;
+}
+.orderlistItems-list-item{
+  display: flex;
+  justify-content: flex-end;
+}
+.orderlistItems-list-btns{
+  padding: 20rpx 0;
+  background: #fff;
+}
+.orderlistItems-list-item>view{
+  height: 52rpx;
+  line-height: 52rpx;
+  width: 152rpx;
+  text-align: center;
+  border: 1rpx solid #000;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  margin: 0 20rpx;
+}
+.orderlistItems-list-item>view:last-of-type{
+  margin-right: 0;
+  color: #E34749;
+  border:1rpx solid #E34749;
+}

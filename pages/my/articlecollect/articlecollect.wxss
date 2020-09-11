@@ -1,0 +1,19 @@
+
+.articlecollect-item{
+    padding: 20rpx 20rpx;
+    border-bottom: 1rpx solid #E4E4E4;
+}
+.articlecollect-item image{
+  width: 219rpx;
+  height: 144rpx;
+}
+
+
+.article-title{
+  padding: 5rpx 10rpx;
+  background: #FFADA9;
+  font-size: 13rpx;
+  border-radius: 20rpx;
+  color: #fff;
+  vertical-align:middle;
+}

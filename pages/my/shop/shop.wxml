@@ -1,0 +1,58 @@
+<view class="container">
+
+	<view class="shop">
+		<view class="shop-image">
+			<image src="../../../static/imgs/timg2.jpg"></image>
+		</view>
+		<view class="box"></view>
+	</view>
+
+	<view class="shop-tabar" >
+		<view class="shop-tabar-item">
+			<image src="/.././static//icons/shop_moye.png"></image>
+			<text>我的积分</text><text style="color:#FF3C01">200</text>
+		</view>
+		<view class="shop-tabar-item" bindtap="recordGo">
+			<image src="/.././static//icons/shop_duihuan.png"></image>
+			<text>兑换记录</text>
+		</view>
+	</view>
+
+	<view class="shop-content">
+		<view class="shop-content-title">
+			<view class="title-text">
+				<text>会员超值现场</text><text>积分抵钱</text>
+			</view>
+			<view class="canshop">
+				<van-checkbox shape="square" icon-size="24rpx" value="{{ checked }}" bind:change="onChange">我能兑换</van-checkbox>
+			</view>
+		</view>
+
+		<view class="shopselector">
+			<van-dropdown-menu active-color="#ee0a24">
+				<van-dropdown-item  id="drop-1" value="{{ value1 }}" bind:open="openDropdown"  options="{{ option1 }}"  />
+				<van-dropdown-item  id="drop-2" value="{{ value2 }}" options="{{ option2 }}" />
+			</van-dropdown-menu>
+		</view>
+
+		<view class="shop-list-data">
+			<view class="shop-list-item" wx:for="{{3}}">
+				<view class="shop-item-img">
+					<image src="../../../static/imgs/timg2.jpg"></image>
+				</view>
+				<view class="shop-list-text">
+					<view>婴幼儿奶粉</view>
+					<view>限量500份</view>
+					<view><text>675</text><text style="font-size:24rpx">积分</text></view>
+				</view>
+				<view class="shop-list-btn" bindtap="conversionAction">
+					<view>立即兑换</view>
+				</view>
+			</view>
+		</view>
+
+
+	</view>
+<view class="zhao" wx:if="{{isShow}}" bindtouchmove="closeDropDownMenu" bindtap="closeDropDownMenu"></view>
+
+</view>

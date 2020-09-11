@@ -1,0 +1,28 @@
+
+<view class="container">
+	<view class="setaddress">
+		<van-cell-group>
+			<van-field value="{{ value }}" label="收货人" placeholder="请输入收货人姓名" border="{{ false }}" />
+			<van-field value="{{ value1 }}" bind:blur="loseBlur" type="digit" label="手机号码" placeholder="请输入收货人手机号码" border="{{ false }}" />
+			<van-field value="{{ value2 }}" is-link disabled input-class='inpu' label="所在地区" placeholder="请选择所在地区" border="{{ false }}" bindtap="addressList" />
+			<van-field value="{{ value3 }}" label="详细地址" placeholder="请输入详细街道/栋/室" border="{{ false }}" />
+
+		</van-cell-group>
+		<view>
+			<van-cell-group>
+				<van-cell title="设为默认"  border="{{ false }}" >
+          <van-switch checked="{{ checked }}" size="24px" bind:change="onChange"  />
+        </van-cell>
+			</van-cell-group>
+		</view>
+    <view class="addresslist-btns">
+		<view class="btns" bindtap="btns">
+			<text>保存</text>
+		</view>
+	</view>
+		<van-popup show="{{ show }}">
+			<van-area bind:confirm="dataList" bind:cancel="delList" area-list="{{ areaList }}" />
+		</van-popup>
+	</view>
+	<van-toast id="van-toast" />
+</view>

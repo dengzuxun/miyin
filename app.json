@@ -1,0 +1,95 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/my/my",
+    "pages/my/addresslist/setaddress/setaddress",
+    "pages/store/commodityList/commodityList",
+    "pages/store/showproductList/showproductList",
+    "pages/store/store", 
+    "pages/my/shop/shoppage/record/record",
+    "pages/home/appointment/purchaseDistory/purchaseDistory",
+    "pages/home/appointment/projectList/swimming/swimming",
+    "pages/my/shop/shop",
+    "pages/my/shop/shoppage/exchange/exchange",
+    "pages/my/shop/shoppage/shoppage",
+    "pages/store/orderSelect/orderSelect",
+    "pages/shopping/pay/paysuccess",
+    "pages/commodity/posted/posted",
+    "pages/home/correlationshopping/correlationshopping",
+    "pages/my/baby/baby",
+    "pages/store/productlist/productlist",
+    "pages/home/appointment/projectList/swimPackage/swimPackage",
+    "pages/my/orderlist/logisticslist/logisticslist",
+    "pages/my/information/information",
+    "pages/my/addresslist/addresslist",
+    "pages/my/articlecollect/articlecollect",
+    "pages/home/article/article",
+    "pages/my/orderlist/invoice/invoice",
+    "pages/my/orderlist/orderdetail/orderdetail",
+    "pages/home/appointment/bookingDetails/bookingDetails",
+    "pages/my/orderlist/orderlist",
+    "pages/gather/welfare/welfare",
+    "pages/my/integral/integral",
+    "pages/my/integral/integralRule/integralRule",
+    "pages/Myreel/Myreel",
+    "pages/home/reel/reel",
+    "pages/home/appointment/projectList/projectList",
+    "pages/commodity/filte/filte",
+    "pages/home/appointment/appointment",
+    "pages/commodity/commodity",
+    "pages/shopping/shopping",
+    "pages/my/refund/refund"
+  ],
+  "usingComponents": {
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-toast": "@vant/weapp/toast/index"  
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小熊宝贝母婴生活馆",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#A52A2A",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./static/icons/home.png",
+        "selectedIconPath": "./static/icons/homeS.png"
+      },
+      {
+        "pagePath": "pages/commodity/commodity",
+        "text": "社区",
+        "iconPath": "./static/icons/group.png",
+        "selectedIconPath": "./static/icons/groupS.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "商城",
+        "iconPath": "./static/icons/shop.png",
+        "selectedIconPath": "./static/icons/shopS.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "./static/icons/card.png",
+        "selectedIconPath": "./static/icons/cardS.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./static/icons/mine.png",
+        "selectedIconPath": "./static/icons/mineS.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

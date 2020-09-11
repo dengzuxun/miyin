@@ -1,0 +1,34 @@
+.container{
+  background-color: #fff;
+}
+.paysuccess{
+  width: 539rpx;
+  height: 416rpx;
+  margin: 0 auto;
+}
+.paysuccess image{
+  width: 539rpx;
+  height: 416rpx;
+}
+.paysuccess-text{
+  text-align: center;
+  margin-top: 30rpx;
+  margin-bottom: 100rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+.bottom-button,.bottom-button1{
+width: 510rpx;
+margin: 0 auto;
+padding: 20rpx 0;
+color:#FF9590 ;
+border-radius: 50rpx;
+border: 1rpx solid #FFAEAA;
+background-color: #fff;
+text-align: center;
+}
+.bottom-button1{
+  background-color: #FF928E;
+  color: #fff;
+  margin-top: 30rpx;
+}

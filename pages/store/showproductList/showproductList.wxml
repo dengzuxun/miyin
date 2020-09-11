@@ -1,0 +1,54 @@
+<view class="container">
+	<!-- 搜索 -->
+	<view class="showproductList">
+		<van-sticky>
+
+			<view class="showproductList-serch">
+				<van-search value="{{ value }}" shape="round" background="#fff" placeholder="请输入搜索关键词" />
+			</view>
+
+			<!-- 商品头部 -->
+
+			<view class="showproductList-list-tabar">
+				<view bindtap="synthesizeClick"  data-types="synthesize" class="list-tabar-item actives">综合</view>
+				<view bindtap="orderClick"  data-types="volume" class="list-tabar-item">
+					<text>销量</text>
+					<text class="{{daindex1===1?'actives':''}} iconfont icon-sanjiaoxing-copy icons"></text>
+					<text class="{{daindex1===0?'actives':''}} iconfont icon-sanjiaoxing-copy iconss"></text>
+				</view>
+				<view bindtap="pricClick" data-index='2' data-types="price" class="list-tabar-item">
+					<text>价格</text>
+					<text class="{{daindex2==1?'actives':''}} iconfont icon-sanjiaoxing-copy icons"></text>
+					<text class="{{daindex2==0?'actives':''}} iconfont icon-sanjiaoxing-copy iconss"></text>
+				</view>
+			</view>
+		</van-sticky>
+		<view class="showproductList-list">
+
+			<view class="showproductList-list-item" bindtap="entranceClick" wx:for="{{shopType}}">
+				<view class="list-item-left">
+					<image mode="center" src="../../../static/imgs/timg1.jpg"></image>
+				</view>
+				<view class="list-item-right">
+					<view class="item-right-top">
+						<text class="icon-title">满减</text><text>{{item.title}}</text>
+					</view>
+					<view class="item-right-footer">
+						<view class="right-footer-pirce">
+							<view class="item-price">
+								<text>¥{{item.price_mark}}</text>
+								<text>¥{{item.price}}</text>
+							</view>
+							<view class="item-next"><text>月销{{item.sales}}笔</text></view>
+						</view>
+						<view class="right-footer-icon" catchtap="addTrolley">
+							<image src="../../../static/icons/store_icon.png"></image>
+						</view>
+					</view>
+				</view>
+			</view>
+			<van-toast duration="1000" id="van-toast" />
+		</view>
+	</view>
+
+</view>

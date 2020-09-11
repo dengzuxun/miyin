@@ -1,0 +1,18 @@
+<view class="container">
+	<view class="paysuccess">
+		<image src="../../../static/imgs/exchange.png"></image>
+	</view>
+	<view class="paysuccess-text">
+		<text>订单已提交至后台处理，请您耐心等待</text>
+	</view>
+	<navigator url="" open-type="navigate">
+		<view class="bottom-button">
+			查看订单
+		</view>
+	</navigator>
+	<navigator url="" open-type="navigate">
+		<view class="bottom-button1">
+			返回首页
+		</view>
+	</navigator>
+</view>

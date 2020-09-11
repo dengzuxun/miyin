@@ -1,0 +1,126 @@
+<template name="orderSelectPage">
+	<view class="container">
+		<view class="order-select-page">
+
+			<!-- 快递配送地址 -->
+			<view class="order-site" wx:if="{{selectIndex==0}}" catchtap="select">
+				<van-row>
+					<van-col custom-class="set" span="3">
+						<van-icon name="location" size="60rpx" />
+					</van-col>
+					<van-col custom-class="get" span="19">
+						<text>陈文</text> <text>157****227</text>
+						<view style="font-size:30rpx">广东省深圳市坂田区长坑路XX大道 </view>
+					</van-col>
+					<van-col custom-class="set" span="2">
+						<van-icon name="arrow" color="#656565" size="50rpx" />
+					</van-col>
+				</van-row>
+			</view>
+
+			<!-- 到店自取 -->
+			<view class="order-site" wx:if="{{selectIndex==1}}">
+				<van-row>
+					<van-col offset="3" custom-class="get" span="15">
+						<text>母婴体验馆</text>
+						<view>广东省深圳市坂田区长坑路XX大道</view>
+					</van-col>
+					<van-col span="6">
+						<view class="order-icon">
+							<van-icon custom-class="order-icont-item" color="#FF9B97" name="location-o" size="50rpx" bind:click="iconbtn" />
+							<van-icon custom-class="order-icont-items" color="#FF9B97" name="phone-o" size="50rpx" bind:click="iconbtn" />
+						</view>
+					</van-col>
+				</van-row>
+			</view>
+
+
+
+
+			<!-- 商品描述 -->
+			<view class="order-commodity">
+				<view class="order-commodity-introduce">
+					<van-row>
+						<van-col custom-class="order-col" span="7">
+							<image src="../../../static/imgs/timg2.jpg"></image>
+							<view class="commodity-introduce-img"></view>
+						</van-col>
+						<van-col custom-class="" span="17">
+							<view class="commodity-introduce-text">
+								<text>Aptamil卓萃白金版 爱他美婴儿宝宝配方奶粉1段380g 0-6个月 </text>
+							</view>
+							<view class="commodity-introduce-price">
+								<van-row>
+									<van-col span="4">
+										<text style="font-size:18rpx;color:#999999">1段</text>
+									</van-col>
+									<van-col span="9" offset="11">
+										<text style="color:#DF1212;font-size:24rpx;">￥128:00 </text><text style="font-size:24rpx;">×1</text>
+									</van-col>
+								</van-row>
+							</view>
+						</van-col>
+					</van-row>
+				</view>
+				<view class="order-commodity-introduce">
+					<view class="order-way">
+						<van-row>
+							<van-col span="8">
+								<text>配送方式</text>
+							</van-col>
+							<van-col offset="12" span="4" style="text-align:right;">
+								<text>快递</text>
+							</van-col>
+						</van-row>
+					</view>
+					<view class="order-reel">
+						<view class="order-reel-list">
+							<van-row>
+								<van-col span="5">
+									<text>优惠券</text>
+								</van-col>
+								<van-col span="6" offset="13">
+									<view class="reel-number">
+										<van-row>
+											<van-col span="17">
+												<view class="order-text">2张可用</view>
+											</van-col>
+											<van-col>
+												<van-icon span="7" name="arrow" size="40rpx" />
+											</van-col>
+										</van-row>
+									</view>
+								</van-col>
+							</van-row>
+						</view>
+					</view>
+					<view class="order-message">
+						<van-row>
+							<van-col span="5">
+								<view style="height:45rpx;line-height:45rpx;">留言</view>
+							</van-col>
+							<van-col span="19">
+								<input value="{{}}" placeholder="选填  请和商家协商一致（50字以内)"></input>
+							</van-col>
+						</van-row>
+					</view>
+				</view>
+			</view>
+
+			<!-- 商品价格 -->
+			<view class="commodity-pirce">
+				<van-cell-group custom-class="pirce-list">
+					<van-cell title="商品金额" value="￥128.00" />
+					<van-cell title="优惠金额" value="-￥10.00" />
+					<van-cell title="运费" value="0.00" />
+					<van-cell title="合计" value="￥118.00" />
+				</van-cell-group>
+			</view>
+
+			<view class="commodity-clearing">
+				<van-submit-bar price="{{ 11800 }}" button-text="提交" bind:submit="onSubmit" bar-class="footer" button-class="btn-class" />
+			</view>
+
+		</view>
+	</view>
+</template>

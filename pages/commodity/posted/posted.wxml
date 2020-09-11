@@ -1,0 +1,97 @@
+ <view class="contanier">
+ 	<view class="posted-content">
+
+ 		<view class="posted">
+ 			<view class="posted-option"></view>
+ 			<view class="posted-top">
+ 				<view class="posted-top-img">
+ 					<image src="../../../static/icons/group.png"></image>
+ 				</view>
+ 				<view class="posted-top-title">
+ 					<view class="user-name">名字</view>
+ 					<view class="user-signature">
+ 						<view class="user-ipt">滴啊定单位那就到你家</view>
+ 						<van-icon name="edit" size="30rpx" color="#eee" />
+ 					</view>
+ 				</view>
+ 				<view class="posted-top-fliex">
+ 					<view style="font-size:30rpx;">1250</view>
+ 					<view>获赞</view>
+ 				</view>
+ 			</view>
+ 		</view>
+ 		<!--  头部结束 -->
+
+ 		<!-- 帖子内容 -->
+ 		<view class="invitation">
+ 			<view class="invitation-title">
+ 				<view class="invitation-title-Posted activeText">发帖</view>
+ 				<view class="invitation-title-praise">赞过</view>
+ 			</view>
+
+ 			<view class="invitation-content">
+ 				<view class="commodity-list">
+ 					<view class="commodity-list-title">
+ 						<image src="../../../static/imgs/timg1.jpg"></image>
+ 					</view>
+ 					<view class="commodity-list-content">
+ 						<view class="commodity-username">姓名</view>
+ 						<view class="commodity-content-text">
+						 <text class=" van-multi-ellipsis--l3">对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八今晚八点打包文件阿卜杜的尾巴觉得比较的挖掘百度打包文件啊</text>
+						 <view class="textShow" bindtap="textShow">
+						 	<text>展开全文</text>
+						 </view>
+						 </view>
+ 						<view class="commodity-content-filte">
+ 							<view class="commodity-content-video">
+ 								<video class="video-filte" play-btn-position="center" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" object-fit="fill"></video>
+ 							</view>
+ 							<!-- <view class="commodity-user-img">
+                  <image src=""></image>
+               </view> -->
+ 						</view>
+ 						<view class="commodity-list-footer">
+ 							<view class="commodity-list-time">26分钟</view>
+ 							<view style="display:flex;">
+ 								<view class="iconfont icon-dianzan1" catchtap="likeClick" data-like="1"></view><text style="font-size:12px;">5000</text>
+ 							</view>
+ 						</view>
+ 					</view>
+ 				</view>
+
+ 				<view class="commodity-list">
+ 					<view class="commodity-list-title">
+ 						<image src="../../../static/imgs/timg1.jpg"></image>
+ 					</view>
+ 					<view class="commodity-list-content">
+ 						<view class="commodity-username">姓名</view>
+ 						<view class="commodity-content-text van-multi-ellipsis--l3">对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八今晚八点打包文件阿卜杜的尾巴觉得比较的挖掘百度打包文件啊</view>
+ 						<view class="commodity-content-filte">
+ 							<!-- <video play-btn-position="center" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" object-fit="fill"></video> -->
+ 							<view class="commodity-user-img">
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 								<image src="../../../static/imgs/timg2.jpg"></image>
+ 							</view>
+ 						</view>
+ 						<view class="commodity-list-footer">
+ 							<view class="commodity-list-time">26分钟</view>
+ 							<view style="display:flex;" bindtap="likeClick">
+ 								<view class="iconfont icon-dianzan1"></view><text style="font-size:12px;">5000</text>
+ 							</view>
+ 						</view>
+ 					</view>
+ 				</view>
+ 			</view>
+ 		</view>
+
+ 		<view class="btn" bindtap="goText">
+ 			<view class="btn-content">
+ 				<text>去发帖</text>
+ 			</view>
+ 		</view>
+ 	</view>
+ </view>

@@ -1,0 +1,57 @@
+.container{
+  background: #fff;
+} 
+.article{
+  padding: 20rpx 24rpx ;
+}
+
+.article-title-text{
+  font-size:35rpx;
+  color: #000000;
+  /* font-weight: 600; */
+}
+.article-title-icon{
+  font-size: 15rpx;
+  color: #fff;
+  background: #21AB37;
+  padding: 5rpx ;
+  vertical-align: middle;
+}
+
+.article-date{
+  font-size: 18rpx;
+  color: #B9B9B9;
+  padding: 20rpx 0;
+}
+
+.article-text{
+  font-size:24rpx;
+  color: #2C2C2C;
+}
+.article-text-title{
+  padding-top: 50rpx;
+}
+
+.article-btn{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.article-btn-left{
+  width: 40%;
+  display: flex;
+}
+.article-btn-left>view{
+  width: 50%;
+  text-align: center;
+}
+.article-btn-right{
+  width: 60%;
+  background: #FF918D;
+  color: #fff;
+  text-align: center;
+  /* line-height: 80rpx; */
+}

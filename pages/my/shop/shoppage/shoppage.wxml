@@ -1,0 +1,48 @@
+<view class="container">
+	<view class="shoppage">
+		<!--积分 tab -->
+		<view class="shop-top">
+			<view class="shop-img">
+				<image src="../../../../static/imgs/timg1.jpg"></image>
+			</view>
+			<view class="shop-name">
+				<view style="36rpx">婴幼儿奶粉</view>
+				<view><text class="shop-integral">325<text style="font-size:24rpx">积分</text></text><text class="shop-number fr">当前剩余89999件</text></view>
+			</view>
+		</view>
+		<!--  -->
+		<view class="shop-desc">
+			<view class="shop-title">商品说明</view>
+			<view class="shop-text">兑换时间在2019年11月30日前，券码有效期至2020年1月1 3日。兑换时间在2019年12月1 日至2020年2月1日，券码有 效期至2020年2月16日。</view>
+			<view>1.仅限于兑换指定商品，每张抵用券只可使用一次，不可找 零，不得转让，不能兑换现金，不再开具发票，不可与其他 优惠活动同时使用。</view>
+			<view>2.仅限在指定餐厅使用，不适用于肯德基宅急送和肯德基甜 品站。</view>
+			<view>2.仅限在指定餐厅使用，不适用于肯德基宅急送和肯德基甜 品站。</view>
+			<view>[友情提示]</view>
+			<view>门店查询:肯德基指定门店易百客服热线: 4008211400, 周一 至周日9:00-21:00。</view>
+			<view>[注意事项]</view>
+			<view>成功兑换后，登录“我的-优惠券"，通过兑换订单查看抵用 券信息。</view>
+		</view>
+
+		<view class="shop-btn">
+			<van-button type="primary" color="#F5402A" block bindtap="showCction">立即兑换</van-button>
+		</view>
+    <!-- tangchuceng -->  
+		<van-action-sheet show="{{ show }}" title="兑换" close-on-click-overlay="{{true}}" bind:close="onClose">
+			<view class="showShop">
+				<view class="showShop-item">
+					<view class="showShop-item-img">
+						<image src="../../../../static/imgs/timg2.jpg"></image>
+					</view>
+					<view class="showShop-item-text">
+						<view><text>婴幼儿奶粉</text></view>
+						<view><text>2000积分</text><text class="fr" style="font-size:24rpx">数量x1</text> </view>
+					</view>
+				</view>
+				<view class="showShop-bottom">
+					<view>实付款：2000积分</view>
+					<view bindtap="exchange">兑换</view>
+				</view>
+			</view>
+		</van-action-sheet>
+	</view>
+</view>

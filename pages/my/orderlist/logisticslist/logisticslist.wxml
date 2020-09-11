@@ -1,0 +1,27 @@
+<view class="container">
+	<view class="logisticslist">
+		<view class="logisticslist-waybill">
+			<view class="logisticslist-img">
+				<image src="../../../../static/imgs/timg2.jpg"></image>
+			</view>
+			<view class="logisticslist-text">
+				<view class="logisticslist-text-title">
+					<text>韵达快递</text>
+				</view>
+				<view class="logisticslist-text-waybill">
+					<text>运单号 111223333444</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="logisticslist-steps">
+			<view class="logisticslist-steps-right">
+				<van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="#ee0a24">
+			<view class="logisticslist-steps-left">0..0</view>
+
+        </van-steps>
+			</view>
+
+		</view>
+	</view>
+</view>

@@ -1,0 +1,66 @@
+<view class="container">
+	<view class="appointment">
+		<view class="appointment-list">
+			<view class="appointment-user">
+				<view class="appointment-user-img">
+					<image src="../../../static/imgs/timg1.jpg"></image>
+				</view>
+				<view class="appointment-user-title">
+					<view><text>{{user.name}}</text></view>
+					<view>
+							<text>当前次数：{{user.appointment_number}} 次</text>
+							<text class="reservation"  bindtap="goHistory">购买记录</text>
+					</view>
+				</view>
+			</view>
+			<view class="appointment-Package" bindtap="gocombo">
+				<image src="../../../static/imgs/youying.png"></image>
+			</view>
+		</view>
+		<view class="appointment-type">
+			<view bindtap="istypeClick" data-is="not" class="appointment-not {{isAppointment?'actives':''}}">预约项目</view>
+			<view bindtap="istypeClick" data-is="has" class="appointment-has {{isAppointment?'':'actives'}}">我的预约<text>({{appointmentHasList.length}})</text></view>
+		</view>
+
+<!-- 预约项目 -->
+		<view class="appointment-listr" wx:if="{{isAppointment?true:false}}">
+
+			<view class="appointment-list-details" wx:for="{{appointmentNotList}}" wx:key="index">
+				<view class="appointment-img">
+					<image src="{{item.img}}"></image>
+				</view>
+				<view class="appointment-content">
+					<view class="appointment-name"><text>{{item.name}}</text><text>已预约：{{item.detail}}次</text></view>
+					<view class="appointment-movement">{{item.brief_introduction}}</view>
+					<view class="appointment-next">
+						<view class="appointmen-time">消耗：{{item.price}}次</view>
+						<view class="appointmen-btn"  data-btn="{{item.Typeid}}" bindtap="appointmentClick">
+							<navigator class="appointmen-btn-style" url="/pages/home/appointment/projectList/projectList?id={{item.id}} "open-type="navigate">立即预约</navigator>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+		<!-- 我的预约 -->
+		<view class="appointment-has-content" wx:if="{{isAppointment?false:true}}">
+			<view class="has-content-details"  wx:for="{{appointmentHasList}}" wx:key="index">
+				<view class="has-details-top">
+						<view class="details-top-time"><text>{{item.appointment_at_date}} </text><text> {{item.appointment_at}}</text></view>
+						<view class="details-top-status"><text>{{item.status==0?"已完成":"待使用"}}</text></view>
+				</view>
+				<view class="has-details-center">
+					<view class="has-details-left"><image src="{{item.imgUrl}}"></image></view>
+					<view class="has-details-right">
+						<view class="has-details-title">{{item.name}}</view>
+						<view class="has-details-content">{{item.detail}}</view>
+						<view class="has-details-next"><text>消耗: </text><text>{{item.price}}次</text></view>
+						<view class="has-details-btn" bindtap="detailsClick" data-id="{{item.Typeid}}">	查看详情</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	
+	</view>
+</view>

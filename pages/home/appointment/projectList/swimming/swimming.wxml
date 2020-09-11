@@ -1,0 +1,131 @@
+<view class="container">
+	<view class="swimming">
+
+		<view class="swimming-item">
+			<van-row>
+				<van-col span="6">
+					<image src="../../../../../static/imgs/timg1.jpg"></image>
+				</van-col>
+				<van-col offset="1" span="17">
+					<van-row>
+						<view class="swimming-list-item">
+							<van-row>
+								<text class="swimming-list-title">项目 3</text>
+							</van-row>
+						</view>
+						<view class="swimming-list-item">
+							<van-row>
+								<text>被动操+洗澡+游泳+穿衣</text>
+							</van-row>
+						</view>
+						<view class="swimming-list-item">
+							<van-row>
+								<text class="swimming-list-next">消耗: </text><text class="swimming-list-next">2 次</text>
+							</van-row>
+						</view>
+					</van-row>
+				</van-col>
+			</van-row>
+		</view>
+		<!-- 项目描述结束 -->
+
+
+		<view class="swimming-users">
+			<van-cell-group>
+				<van-field value="{{ username }}" label="预约人:" placeholder="请输入用户名" />
+				<van-field value="{{ password }}" type="number" label="手机 :" placeholder="请输入密码" />
+				<van-field value="{{ password }}" type="textarea" label="备注 :" placeholder="选项,50字以内" autosize="{{true}}" maxlength="50" />
+			</van-cell-group>
+		</view>
+
+
+		<!-- 选择导师 -->
+		<view class="swimming-advisor-list">
+			<swiper class="advisor-list-swiper" display-multiple-items="3" duration="2000">
+				<swiper-item data-id="item.id" data-index="{{index}}" bindtap="clickList" wx:for="{{advisorList}}" class="swimming-advisor-current" wx:key="index">
+					<view class="box {{advisorSelect==index?'actives':''}}">
+						<image wx:if="{{advisorSelect==index}}" class="icon-font" src="../../../../../static/icons/current.png"></image>
+						<view class="advisor-current-img">
+							<image src="{{item.imgUrl}}"></image>
+						</view>
+						<view class=""><text>{{item.name}}</text></view>
+					</view>
+				</swiper-item>
+			</swiper>
+		</view>
+
+
+		<!-- 时间 -->
+		<view class="advisor-data">
+			<scroll-view scroll-x>
+				<view class="scroll-data">
+					<view class="{{activeIndex==index?'active':''}}" data-i="{{index}} " bindtap="setIndex" wx:key="index" wx:for="{{datae}}">{{item.month}}-{{item.day}}</view>
+				</view>
+			</scroll-view>
+		</view>
+
+
+		<!-- 预约时间 -->
+
+		<!-- <view class="radio-select">
+			<van-radio-group value="{{ defalutChecked }}" bind:change="onChange">
+				<van-cell-group>
+				<view wx:for="{{thisData}}"  wx:key="index">
+					<van-cell title-style="{{defalutChecked==index?'color:#CC9933':''}}" wx:if="{{item.status}}" title="{{item.title}}" clickable data-name="{{index}}" bind:click="onClick">
+						<van-radio checked-color="#CC9933" slot="right-icon" name="{{index}}" />
+					</van-cell>
+					<view class="already val-cell" wx:if="{{!item.status}}"> 
+					{{item.title}}
+					<text style="color:#E81212; float:right; font-size:23rpx;">已被预约</text>
+					</view>
+				</view>
+				</van-cell-group>
+			</van-radio-group>
+		</view> -->
+
+
+		<view class="radio-select">
+			<van-radio-group value="{{ defalutChecked }}" bind:change="onChange">
+				<van-cell-group>
+					<view wx:for="{{ysedata}}" wx:key="index">
+						<van-cell title-style="{{defalutChecked==index?'color:#CC9933':''}}" wx:if="{{item.status}}" title="{{item.time_slot}}" clickable data-name="{{index}}" bind:click="onClick">
+							<van-radio checked-color="#CC9933" slot="right-icon" name="{{index}}" />
+						</van-cell>
+					</view>
+					<view wx:for="{{ysedata}}" wx:key="index">
+						<van-cell wx:if="{{!item.status}}" custom-class="{{!item.status?'already val-cell':''}}" title="{{item.time_slot}}">
+							<text style="color:#E81212; float:right; font-size:23rpx;">已被预约</text>
+						</van-cell>
+					</view>
+				</van-cell-group>
+			</van-radio-group>
+		</view>
+
+
+
+
+
+		<view class="advisor-text">
+			<text style="color:#F20000;font-size:23rpx;">注：预约成功后，若要修改预约信息必须提前2小时修改或取消，否则订单系 统将正常扣次数</text>
+		</view>
+		<view>
+			<van-button block type="info" bind:click="appointmentSubmit">立即预约</van-button>
+		</view>
+		<van-dialog use-slot title="" show="{{ falg }}" show-cancel-button bind:confirm="getUserInfo" cancel-button-text="返回首页" confirm-button-text="查看详情" bind:cancel="onClose">
+
+			<view class="appointment-Dialog">
+				<view class="appointment-dialog-success">
+					<image src="../../../../../static/imgs/timg1.jpg"></image>
+				</view>
+
+				<view class="appointment-dialog-text">
+					<view style="font-size:40rpx;">成功预约</view>
+					<view style="font-size:28rpx;color:#8A8A8F">您已预约成功，记得准时携带宝宝到店体验哟~</view>
+				</view>
+
+				<view style="font-size:15rpx;color:red;">注：预约成功后，若要修改预约信息必须提前2小时修改或取消，否则订单系统将正常扣次数</view>
+			</view>
+
+		</van-dialog>
+	</view>
+</view>

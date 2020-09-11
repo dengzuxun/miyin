@@ -1,0 +1,1 @@
+export const HOST = "http://xxbaby.mingyuanpay.com/api/v1";

@@ -1,0 +1,58 @@
+<view class="container">
+	<view class="commodity">
+		<!-- 头部 -->
+		<view class="commodity-title">
+			<!-- <view class="autos"><image src="../../static/icons/auto.png"></image></view> -->
+			<view class="commodity-title-text">广场</view>
+			<navigator url="/pages/commodity/posted/posted" open-type="navigate">
+
+				<view>
+					<image src="../../static/icons/home.png"></image>
+				</view>
+			</navigator>
+
+		</view>
+
+		<!-- 广场列表内容 -->
+		<view class="commodity-content">
+			<view class="commodity-list">
+				<view class="commodity-list-title">
+					<image src="../../static/imgs/timg1.jpg"></image>
+				</view>
+				<view class="commodity-list-content">
+					<view class="commodity-username">姓名</view>
+					<view class="commodity-content-text">对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八点打包文件阿卜杜的对你撒娇豆瓣无比的今晚八今晚八点打包文件阿卜杜的尾巴觉得比较的挖掘百度打包文件啊</view>
+					<view class="commodity-content-filte">
+						<video src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls="{{false}}"></video>
+					</view>
+					<view class="commodity-list-footer">
+						<view class="commodity-list-time">26分钟</view>
+						<view bindtap="likeClick">
+							<view class="iconfont icon-dianzan1"></view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 发视频和写文章的按钮 -->
+			<view class="commodityBtn" catchtap="showClick">
+				<view wx:if="{{indexHtml}}" class="commodityBtn-nan">
+					<view class="commodityBtn-text" catchtap="goFilte">
+						<view>
+							<image mode="aspectFit" src="../../static/icons/fliter.png"></image>
+						</view>
+						<view class="text">发文</view>
+					</view>
+					<view class="commodityBtn-video" catchtap="goVideo">
+						<view>
+							<image src="../../static/icons/video.png" mode="aspectFit"></image>
+						</view>
+						<view class="text">发视频</view>
+					</view>
+				</view>
+				<view class="commodityBtn-icon">
+					<image src="../../static/imgs/timg2.jpg"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

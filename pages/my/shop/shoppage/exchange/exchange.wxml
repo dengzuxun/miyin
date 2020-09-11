@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="exchange">
+    <image src="../../../../../static/imgs/exchange.png"></image>  
+  </view>
+    <view class="bottom-button">
+    <navigator url="/pages/my/shop/shop" open-type="navigate">返回首页</navigator>
+    </view>
+</view>

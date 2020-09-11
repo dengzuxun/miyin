@@ -1,0 +1,30 @@
+<import src="../../templeat/orderSelectPage/orderSelectPage.wxml" />
+
+<view class="content">
+	<view class="box">
+		<van-row custom-class="custom">
+			<!--  <van-col span="12"><view bindtap="" class="actives">快递配送</view></van-col>
+			<van-col span="12"><view>到店自取</view></van-col> -->
+			<van-col span="12" wx:for="{{select}}" wx:key="index">
+				<view data-index="{{item.pag}}" bindtap="selectClick" class="{{selectIndex==item.pag?'actives':''}}">{{item.name}}</view>
+			</van-col>
+		</van-row>
+	</view>
+	<template is="orderSelectPage" data="{{selectIndex}}"></template>
+	<van-action-sheet show="{{ show }}" title="选择收货地址" bind:close="siseIcon">
+		<van-radio-group custom-class="group-content" value="{{ radio }}" bind:change="onChange">
+			<view class="selecesite" wx:for="{{20}}">
+				<van-radio name="{{index}}">
+					<view><text wx:if="{{radio==index}}" class="default-text">默认</text><text>社会王</text><text>17835395569</text></view>
+					<view><text style="color:#e5e5e5;">山西省太原市小店区平阳路学府街大马新村</text></view>
+				</van-radio>
+				<view class="icon">
+					<van-icon size="40rpx" name="edit" />
+				</view>
+			</view>
+		</van-radio-group>
+		<view class="action-btn">
+				新增地址
+		</view>
+	</van-action-sheet>
+</view>

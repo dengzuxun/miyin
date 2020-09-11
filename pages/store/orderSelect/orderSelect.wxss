@@ -1,0 +1,153 @@
+page{
+  height: 100%;
+  background-color: #eee;
+}
+.content{
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.box{
+  margin: 12rpx 40rpx;
+  /* padding: 20rpx 0; */
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.actives{
+  background-color: #FF9B97 !important;
+  color: #fff;
+}
+
+
+
+.box view{
+  border-radius: 50rpx;
+  background-color: #fff;
+}
+.custom{
+  height: 57rpx;
+  line-height: 57rpx;
+}
+
+.order-site{
+  height: 142rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.order-select-page{
+  margin: 0 20rpx;
+}
+
+.order-icon{
+    padding-top: 50rpx;
+}
+
+.order-icont-item{
+  margin-right: 40rpx;
+}
+
+
+.set{
+ height: 142rpx;
+ padding: 40rpx 10rpx;
+}
+.get{
+  padding: 20rpx 0;
+  line-height: 50rpx;
+}
+.order-commodity{
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  padding: 20rpx 20rpx;
+  font-size: 22rpx;
+}
+.commodity-introduce-text{
+  font-size: 28rpx;
+
+}
+
+.order-text{
+background: red;
+text-align: center;
+padding: 5rpx 0;
+color: #fff;
+}
+.order-commodity-introduce image{
+      width: 184rpx;
+      height: 184rpx;
+}
+.order-commodity-introduce>view{
+    padding: 20rpx;
+}
+.not{
+  border: none;
+}
+
+.reel-number{
+  vertical-align:top;
+  overflow: hidden;
+  /* height: 100%; */
+}
+
+
+.order-way{
+  border-bottom: 1rpx solid #DDDDDD;
+  /* padding: 20rpx 0; */
+}
+
+.btn-class{
+  border-radius: 0 !important;
+  background: #FF9B95 !important;
+  border: none !important;
+}
+.footer{
+  padding: 0 !important;
+}
+
+
+/* 价格 */
+
+.pirce-list{
+  border-radius: 20rpx!important;
+}
+
+.commodity-pirce{
+  border-radius: 20rpx!important;
+  overflow: hidden;
+}
+/* 地址 */
+
+.selecesite{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}
+.selecesite:nth-last-of-type(1){
+  margin-bottom: 100rpx;
+}
+.default-text{
+  color: #FF7272;
+  font-size: 20rpx;
+  padding:2rpx 5rpx;
+  border: 1rpx solid #FCF1F0;
+  margin-right: 10rpx;
+}
+.icon{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 40rpx;
+}
+
+.action-btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #FF948E;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  color: #fff;
+}

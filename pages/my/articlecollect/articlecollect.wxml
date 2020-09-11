@@ -1,0 +1,60 @@
+<view class="contanter">
+	<view class="articlecollect">
+		<view class="articlecollect-item">
+			<navigator url="/pages/home/article/article" open-type="navigate">
+			<van-row>
+				<van-col span="8">
+					<image src="../../../static/imgs/timg2.jpg"></image>
+				</van-col>
+				<van-col span="16">
+					<view>
+						<text class="article-title">宝宝护理</text>
+						<text style="font-size:29rpx">宝宝护理会不会出现坏毛病了怎么办？</text>
+					</view>
+					<view>
+						<text style="font-size:24rpx;color:#A0A0A0;">2020-07-23</text>
+						<van-icon class="fr" name="star" size="30rpx" color="#FF918D" />
+					</view>
+				</van-col>
+			</van-row>
+			</navigator>
+		</view>
+
+		<view class="articlecollect-item">
+			<van-row>
+				<van-col span="8">
+					<image src="../../../static/imgs/timg2.jpg"></image>
+				</van-col>
+				<van-col span="16">
+					<view>
+						<text class="article-title">宝宝护理</text>
+						<text style="font-size:29rpx">宝宝护理会不会出现坏毛病了怎么办？</text>
+					</view>
+					<view>
+						<text style="font-size:24rpx;color:#A0A0A0;">2020-07-23</text>
+						<van-icon class="fr" name="star" size="30rpx" color="#FF918D" />
+					</view>
+				</van-col>
+			</van-row>
+		</view>
+
+
+		<view class="articlecollect-item">
+			<van-row>
+				<van-col span="8">
+					<image src="../../../static/imgs/timg2.jpg"></image>
+				</van-col>
+				<van-col span="16">
+					<view>
+						<text class="article-title">宝宝护理</text>
+						<text style="font-size:29rpx">宝宝护理会不会出现坏毛病了怎么办？</text>
+					</view>
+					<view>
+						<text style="font-size:24rpx;color:#A0A0A0;">2020-07-23</text>
+						<van-icon class="fr" name="star" size="30rpx" color="#FF918D" />
+					</view>
+				</van-col>
+			</van-row>
+		</view>
+	</view>
+</view>

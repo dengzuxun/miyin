@@ -1,0 +1,16 @@
+@import "../../templeat/orderlistItem//orderlistItem.wxss";
+
+.orderlist-tabers{
+    display: flex;
+    justify-content: space-around;
+    font-size: 28rpx;
+    background: #fff;
+}
+.orderlist-tabers>view{
+  padding: 10rpx 10rpx;
+  /* background: red; */
+}
+.actives{
+  border-bottom: 2rpx solid #FF9B96;
+  color: #FF9B96;
+}

@@ -1,0 +1,53 @@
+<view class="cart-wrap">
+  <view class="main-wrap">
+  <view style="text-align:right;line-height:80rpx;">
+    <text bindtap="toggelStatus" style="font-size:30rpx;color:{{isEdit?'#A8A8A8':'#FE4646'}}">{{isEdit?'编辑':'完成'}}</text>
+  </view>
+    <view class="item-wrap" wx:for="{{list}}" >
+    <van-row>
+      <van-col span="6">
+       <van-checkbox
+        value="{{ item.selected }}"
+        checked-color="#E60012"
+        bind:change="toggleSelected"
+        data-index="{{index}}"
+        >
+          <image style="width:140rpx;height:140rpx" mode="aspectFit" src="{{item.imgUrl}}"/>
+        </van-checkbox></van-col>
+      <van-col offset="1" span="17">
+        <van-row>
+            <view style="font-weight:bold;">{{item.title}}</view>
+        </van-row>
+          <van-row>
+            <view>{{item.type}}</view>
+            <!-- <picker></picker> -->
+        </van-row>
+        <van-row style="line-height:60rpx">
+          <van-col span="5">
+            <view style="color:#FE4545">￥{{item.price}}</view>
+          </van-col>
+            <van-col offset="8" span="11" >
+              <van-stepper disable-input value="{{ item.nums }}" bind:change="changeCount" data-index="{{index}}" />
+          </van-col>
+        </van-row>
+      </van-col>
+    </van-row>
+    </view>
+  </view>
+</view>
+<van-submit-bar
+  price="{{ totalPrice }}"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+  button-text="{{isEdit?'结算':'删除'}}({{total}})"
+>
+  <van-checkbox
+  value="{{ isSelectedAll }}"
+  checked-color="#E60012"
+  bind:change="toggleSelectedStatus"
+  >
+      全选
+    </van-checkbox>
+  <!-- <view wx:if="{{true}}" class="price-tip" >不含运费</view> -->
+  <view wx:if="{{false}}" slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view>
+</van-submit-bar>

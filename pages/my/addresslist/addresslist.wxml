@@ -1,0 +1,33 @@
+<view class="container">
+	<view class="addresslist">
+		<view class="addresslist-list" wx:for="{{addresslistdata}}" wx:key="index">
+			<van-row>
+				<van-col span="2">
+					<van-icon name="location-o" size="40rpx" />
+				</van-col>
+				<van-col span="22">
+					<view>
+						<text wx:if="{{item.default==1}}" style="margin-right:10rpx;color:#FF7171;font-size:20rpx;background:#FCF1F0">默认</text>
+						<text style="font-size:24rpx;margin-right:20rpx">{{item.name}}</text>
+						<text style="font-size:24rpx">{{item.mobile}}</text>
+					</view>
+					<view>
+						<text style="font-size:24rpx;padding:10rpx 0;">{{item.province}}{{item.city}}{{item.county}}{{item.address}}</text>
+					</view>
+					<view class="fr">
+						<van-icon name="edit" bindtap="deitClick" data-edit="{{index}}"  size="34rpx" />
+						<van-icon name="delete" bind:click="delClick" data-del="{{item.id}}" size="34rpx" />
+					</view>
+				</van-col>
+			</van-row>
+		</view>
+	</view>
+	<view class="addresslist-btns">
+		<view class="btns">
+		 <navigator url="/pages/my/addresslist/setaddress/setaddress?name=新增地址" open-type="navigate">
+			<text>新增收获地址</text>
+			</navigator>
+		</view>
+	</view>
+	<van-dialog id="van-dialog" />
+</view>

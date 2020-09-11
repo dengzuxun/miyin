@@ -1,0 +1,246 @@
+
+@import "../../../static/iconfont.wxss";
+.contanier{
+  background: #eee;
+}
+.posted{
+  position: relative;
+  height: 285rpx;
+  width: 100%;
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597864040852&di=1171bdbdd545fc4ed3bc74db676bd401&imgtype=0&src=http%3A%2F%2Fa0.att.hudong.com%2F56%2F12%2F01300000164151121576126282411.jpg");
+}
+
+
+.posted-option{
+  width: 100%;
+  height: 285rpx;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background:#000000;
+  opacity: 0.1;
+}
+.posted-top{
+  display: flex;
+  color: #fff;
+}
+.posted-top-img{
+  margin-left: 50rpx;
+  position: relative;
+  z-index: 22;
+}
+.posted-top-img,.posted-top-title{
+  margin-top: 30rpx;
+}
+.posted-top-title{
+  margin-left: 10rpx;
+}
+.user-name{
+  font-size: 48rpx;
+}
+.user-signature{
+  display: flex;
+  height: 28rpx;
+}
+.posted-top-img image{
+  width: 102rpx;
+  height: 102rpx;
+  border-radius: 50%;
+}
+
+.user-ipt{
+  font-size: 20rpx;
+  color: #fff;
+  background:#000000;
+  width: 330rpx;
+  height: 28rpx;
+  opacity: 0.6;
+  margin-right: 5rpx;
+}
+.user-signature image{
+  margin-left: 7rpx;
+  width: 28rpx;
+  height: 28rpx;
+}
+.posted-top-fliex{
+  position: absolute;
+  bottom: 10%;
+  right: 15rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+
+/*发帖和赞过 */
+.invitation-title{
+  display: flex;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  line-height: 48rpx;
+}
+.invitation-title > view{
+    margin: 0 15rpx;
+    padding: 10rpx 0;
+}
+.invitation-title-Posted{
+  margin-left: 20rpx;
+}
+.activeText{
+  font-size: 40rpx;
+  color: #06C2C3;
+  border-bottom: 6rpx solid #06C2C3;
+}
+
+/*内容  */
+.invitation{
+  margin-bottom:90rpx;
+}
+
+.commodity-list{
+  display: flex;
+  margin: 0 20rpx;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 27rpx;
+}
+
+.commodity-list-content{
+  margin-right: 44rpx;
+}
+
+.commodity-title image{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+/* 全文 */
+.textShow{
+  color: #06C2C3;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+}
+
+
+
+/* user图像 */
+.commodity-list-title{
+  display: flex;
+  padding: 0 20rpx;
+}
+
+.commodity-list-title image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+
+.commodity-content-filte{
+  margin-top: 20rpx;
+}
+
+.video-filte{
+  width: 209rpx;
+  height: 359rpx;
+}
+.commodity-username{
+  line-height: 80rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+
+}
+
+.commodity-content-text{
+  font-size: 28rpx;
+  color: #121212;
+}
+.commodity-user-img{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.commodity-user-img image{
+    width: 177rpx;
+    height: 177rpx;
+    margin: 10rpx 0;
+}
+
+.commodity-list-footer{
+  display: flex;
+  justify-content:space-between;
+}
+
+.likes image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.commodityBtn{
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  display: flex;
+  background: #eee;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+}
+.text{
+  line-height:100rpx;
+}
+.commodityBtn-text,.commodityBtn-video{
+    display: flex;
+    margin: 0 20rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.commodityBtn-nan{
+  display: flex;
+  /* height: 100rpx; */
+  /* line-height: 100rpx; */
+}
+.commodityBtn-text image,.commodityBtn-video image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 45%;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.commodityBtn-icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.commodityBtn-icon image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.commodity-list-time{
+  color: #B5B5B5;
+}
+
+
+
+
+
+
+
+/* 底部按钮 */
+
+.btn{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.btn-content text{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: #06C2C3;
+  color: #fff;
+  height: 82rpx;
+  line-height: 82rpx;
+}

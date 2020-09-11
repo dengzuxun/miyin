@@ -1,0 +1,11 @@
+
+<import src="../../templeat/orderlistItem/orderlistItem.wxml"/>
+<view class="container">
+  <view class="orderlist">
+    <view class="orderlist-tabers">
+      <view bindtap="orderlistTabClick" data-index="{{index}}" wx:for="{{orderlistTab}}" wx:key="index" class="{{orderlistTabIndex==index?'actives':''}}">{{item.name}}</view>
+      
+    </view>
+    <template is="orderlistItem" data="{{orderlistItem}}"></template>
+  </view>
+</view>

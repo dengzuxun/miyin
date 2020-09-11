@@ -1,0 +1,28 @@
+/* pages/my/shop/shoppage/record/record.wxss */
+.container{
+  background: #F7F7F7;
+}
+.record-date{
+  background: #fff;
+  line-height: 70rpx;
+  border-top: 26rpx solid #eee;
+}
+.record-content image{
+    width: 100%;
+    height: 180rpx;
+    border-radius: 10rpx;
+}
+.record-content{
+  padding: 14rpx 0;
+  line-height: 60rpx;
+  text-align: right;
+  font-size: 26rpx;
+}
+.record-footer{
+  background: #fff;
+}
+.record-mark{
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 35rpx;
+}

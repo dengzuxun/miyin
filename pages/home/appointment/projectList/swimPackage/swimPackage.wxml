@@ -1,0 +1,76 @@
+<view class="container">
+	<view class="swimPackage">
+		<view class="swimPackage-content">
+			<view style="padding:20rpx 0"><text>请选择购买套餐</text></view>
+			<swiper class="swimPackage-list-swiper" display-multiple-items="3" duration="2000">
+				<swiper-item bindtap="clickList" data-index="{{index}}" wx:for="{{swimPackageList}}" class="swimPackage-current" wx:key="index">
+					<view class="box  {{advisorSelect==index?'actives':''}}">
+						<view class="swimPackage-name">
+							<view>{{item.name}}</view>
+						</view>
+						<view class="swimPackage-next"><text>{{item.frequency}}次</text></view>
+						<view class="swimPackage-price"><text>￥{{item.money}}</text></view>
+						<view class="swimPackage-originalprice"><text>原价￥{{item.money_mark}}</text></view>
+					</view>
+				</swiper-item>
+			</swiper>
+
+			<view class="swimPackage-details">
+				<text>套餐权益</text>
+				<view class="swimPackage-item">
+					<view class="swimPackage-items">
+						<view>
+							<image src="../../../../../static/icons/积分.png"></image>
+						</view>
+						<view>
+							<view>积分</view>
+							<view style="color:#B2B2B2;padding-top:5rpx">赠送8000积分</view>
+						</view>
+					</view>
+
+					<view class="swimPackage-items">
+						<view>
+							<image src="../../../../../static/icons/优惠券 拷贝.png"></image>
+						</view>
+						<view>
+							<view>优惠券</view>
+							<view style="color:#B2B2B2;padding-top:5rpx">赠送20元优惠券</view>
+						</view>
+					</view>
+
+					<view class="swimPackage-items">
+						<view>
+							<image src="../../../../../static/icons/免1.png"></image>
+						</view>
+						<view>
+							<view>立省</view>
+							<view style="color:#B2B2B2;padding-top:5rpx">立省1682元</view>
+						</view>
+					</view>
+
+					<view class="swimPackage-items">
+						<view>
+							<image src="../../../../../static/icons/椭圆 5 拷贝 31.png"></image>
+						</view>
+						<view>
+							<view>商品</view>
+							<view style="color:#B2B2B2;padding-top:5rpx">游泳必备</view>
+						</view>
+					</view>
+
+
+				</view>
+			</view>
+
+			<view class="swimPackage-detailss">
+				<text>权益说明</text>
+				<view class="interests-explain">
+					<text>{{swimPackageDetails.explain}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="interests-btns">
+			<van-button custom-style="interests-btn" size="large" round color="linear-gradient(to right, #F5DBAA, #E6C17F)">立即购买</van-button>
+		</view>
+	</view>
+</view>

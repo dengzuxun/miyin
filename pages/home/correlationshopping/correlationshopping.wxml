@@ -1,0 +1,71 @@
+<view class="container">
+	<view class="correlationshopping">
+		<!-- 相关商品列表 -->
+
+		<view class="correlationshopping-list">
+			<view class="correlationshopping-img">
+				<image src="../../../static/imgs/timg2.jpg"></image>
+			</view>
+			<view class="correlationshopping-item">
+				<view class="correlationshopping-title">
+					<text class="icon-title">满减</text>
+					<text>三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉...</text>
+				</view>
+				<view class="correlationshopping-price">
+					<view class="item-price">
+						<text style="color:#D90004">¥2999.00</text>
+						<text class="">¥32500.00</text>
+					</view>
+					<view class="item-icon" catchtap="addTrolley">
+						<image src="../../../static/icons/store_icon.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="correlationshopping-list">
+			<view class="correlationshopping-img">
+				<image src="../../../static/imgs/timg2.jpg"></image>
+			</view>
+			<view class="correlationshopping-item">
+				<view class="correlationshopping-title">
+					<text class="icon-title">满减</text>
+					<text>三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉...</text>
+				</view>
+				<view class="correlationshopping-price">
+					<view class="item-price">
+						<text style="color:#D90004">¥2999.00</text>
+						<text class="">¥32500.00</text>
+					</view>
+					<view class="item-icon" catchtap="addTrolley">
+						<image src="../../../static/icons/store_icon.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="correlationshopping-list">
+			<view class="correlationshopping-img">
+				<image src="../../../static/imgs/timg2.jpg"></image>
+			</view>
+			<view class="correlationshopping-item">
+				<view class="correlationshopping-title">
+					<text class="icon-title">满减</text>
+					<text>三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉三鹿奶粉...</text>
+				</view>
+				<view class="correlationshopping-price">
+					<view class="item-price">
+						<text style="color:#D90004">¥2999.00</text>
+						<text class="">¥32500.00</text>
+					</view>
+					<view class="item-icon" catchtap="addTrolley">
+						<image src="../../../static/icons/store_icon.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 相关商品列表结束 -->
+
+	</view>
+</view>

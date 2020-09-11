@@ -1,0 +1,135 @@
+<view class="container">
+	<view class="integral">
+		<view class="box">
+			<view class="integral-numbel">
+				<view><text>6688</text></view>
+				<view><text>当前积分</text></view>
+			</view>
+			<view class="integral-tab">
+				<view class="integral-tab-item">
+					<view class="tab-img">
+						<van-icon name="shop-collect-o" size="80rpx" color="red" />
+					</view>
+					<view class="tab-text">积分商城</view>
+				</view>
+				<view class="integral-tab-item" bindtap="signInClick">
+					<view class="tab-img">
+						<van-icon name="shop-collect-o" size="80rpx" color="red" />
+					</view>
+					<view class="tab-text">每日签到</view>
+				</view>
+
+				<view class="integral-tab-item">
+					<view class="tab-img">
+						<van-icon name="shop-collect-o" size="80rpx" color="red" />
+					</view>
+					<view class="tab-text">积分任务</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="integral-list">
+			<view class="integral-detail">
+				<view>积分明细</view>
+				<view>筛选时间
+					<van-icon name="arrow-down" size="30rpx" />
+				</view>
+			</view>
+			<!-- 积分列表开始 -->
+			<view class="integral-list-data">
+
+				<view class="list-data-items">
+					<text style="font-size:24rpx;color:#000000;">2020年2月</text>
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+				</view>
+
+				<view class="list-data-items">
+					<text style="font-size:24rpx;color:#000000;">2020年2月</text>
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+					<view class="integral-list-items">
+						<view class="integral-type">
+							<view class="integral-text">兑换积分商品</view>
+							<text class="integral-date">2020.01.04</text>
+						</view>
+						<view class="integral-number">-50</view>
+					</view>
+				</view>
+			</view>
+			<!-- 积分列表结束 -->
+		</view>
+
+			<van-dialog use-slot theme="round-button"  confirmButtonText="我知道了" show="{{ show }}"  bind:close="onClose">
+				<view class="dialog-btn" style="text-align:center">
+						<view style="color:#FA8F8F;font-size:40rpx;">签到成功！</view>
+						<view style="font-size:34rpx;color:#AAAFB5;">恭喜你获得10积分</view>
+				</view>
+			</van-dialog>
+	</view>
+</view>

@@ -1,0 +1,110 @@
+@import "../../static/iconfont.wxss";
+
+.container{
+  background: #fff;
+}
+.commodity-list{
+    display: flex;
+    margin: 0 20rpx;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #eee;
+}
+.commodity-title{
+  height: 64rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.autos>image{
+  width: 44rpx !important;
+  height: 44rpx !important;
+}
+.commodity-title>view{
+  margin: 0 25rpx;
+}
+.commodity-title-text{
+  line-height: 64rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color:#06C2C3;
+}
+
+
+/* 内容 */
+.commodity-list-content{
+  margin-left: 20rpx;
+}
+.commodity-title image{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+}
+.commodity-list-title{
+  display: flex;
+}
+.commodity-username{
+  line-height: 80rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+
+}
+.commodity-list-title image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.commodity-content-text{
+  font-size: 28rpx;
+  color: #121212;
+}
+
+.commodity-list-footer{
+  display: flex;
+  justify-content:space-between;
+}
+.icont{
+  padding-right: 50rpx;
+}
+.icon-dianzan1{
+  color: #eee;
+}
+.commodityBtn{
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  display: flex;
+  background: #eee;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+}
+.text{
+  line-height:100rpx;
+}
+.commodityBtn-text,.commodityBtn-video{
+    display: flex;
+    margin: 0 20rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.commodityBtn-nan{
+  display: flex;
+  /* height: 100rpx; */
+  /* line-height: 100rpx; */
+}
+.commodityBtn-text image,.commodityBtn-video image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 45%;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.commodityBtn-icon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.commodityBtn-icon image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

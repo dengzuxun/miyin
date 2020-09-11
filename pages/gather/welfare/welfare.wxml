@@ -1,0 +1,31 @@
+<view class="container">
+	<view class="welfare">
+
+		<view class="welfare-list" wx:for="{{welfareList}}" wx:for-item="idxs" wx:for-index="idxst" wx:key="idxst">
+			<view style="font-size:36rpx;padding:10px 0;">{{idxs.name}}</view>
+
+			<view class="welfare-list-items" wx:for="{{idxs.chrind}}" wx:for-item="ite" wx:for-index="itet" wx:key="itet">
+				<view class="list-items-img">
+					<image src="{{ite.urlImg}}"></image>
+				</view>
+				<view class="list-items-content">
+					<view class="list-items-text">
+						<view>{{ite.title}}</view>
+						<view style="font-size:24rpx;color:#AFAFAF;">{{ite.text}}</view>
+						<view>积分+{{ite.integral}}</view>
+					</view>
+					<view class="list-items-btn" data-id="{{ite.id}}" bindtap="welfareType">
+						<text>{{ite.btn}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<van-dialog use-slot theme="round-button" confirmButtonText="我知道了" show="{{ show }}" bind:close="onClose">
+		<view class="dialog-btn" style="text-align:center">
+			<view style="color:#FA8F8F;font-size:40rpx;">签到成功！</view>
+			<view style="font-size:34rpx;color:#AAAFB5;">恭喜你获得10积分</view>
+		</view>
+	</van-dialog>>
+</view>

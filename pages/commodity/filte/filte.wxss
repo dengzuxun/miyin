@@ -1,0 +1,28 @@
+.container{
+  background: #fff;
+}
+textarea{
+  width: 100%;
+}
+.content{
+  margin: 5rpx 25rpx;
+}
+.content-media{
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-media>view{
+  width: 176rpx;
+  height: 176rpx;
+  margin: 8.5rpx 30rpx;
+  text-align: center;
+}
+.content-media image{
+  width: 176rpx;
+    height: 176rpx;
+}
+.media-btn image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}

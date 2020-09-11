@@ -1,0 +1,130 @@
+<view class="container">
+	<view class="commodityList">
+		<!-- 图片开始 -->
+		<view class="commodityList-img">
+			<swiper>
+				<block>
+					<swiper-item>
+						<image src="../../../static/imgs/timg1.jpg"></image>
+					</swiper-item>
+					<swiper-item>
+						<image src="../../../static/imgs/timg2.jpg"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<!-- 图片结束 -->
+		<!--商品的配置  -->
+		<view class="commodityList-particulars">
+
+			<view class="commodityList-particulars_top">
+				<view class="particulars_top_title">
+					<text class="icon_text">新品</text><text>Aptamil 卓萃白金版 爱他美婴儿宝宝配方奶粉 1段 380g 0-6个月</text>
+				</view>
+
+				<view class="commodityList_price">
+					<text class="commodityList_price_current">￥256</text>
+					<text class="commodityList_price_original">￥256</text>
+				</view>
+
+				<view class="particulars_top_share">
+					<view class="top_share_btn">
+						<image src="../../../static/icons/group.png"></image>
+						<text>分享</text>
+					</view>
+				</view>
+
+			</view>
+
+			<view class="commodityList-particulars_center" bindtap="selectcommodityList">
+				<view class="particulars_center-ipt"><input value="{{value}}" disabled="{{true}}" placeholder="选择规格" placeholder-style=""></input></view>
+				<view> > </view>
+			</view>
+
+			<view class="commodityList-particulars_footer">
+				<text>说明</text><text>支持7天无理由退款</text>
+			</view>
+		</view>
+
+		<view class="commodityList-img">
+			<view class="commodityList-img-title">
+				<text>--- 商品详情 ---</text>
+			</view>
+			<view class="commodityList-img-contante">
+				<image src="../../../static/imgs/timg2.jpg"></image>
+			</view>
+		</view>
+
+		<view class="commodityList-btn">
+			<view class="commodityList-btn-list">
+				<view class="commodityList-btn-icon">
+					<view class="btn-view">
+						<view class="btn-icon">
+							<image src="../../../static/drawable-xxxhdpi/my_kf.png"></image>
+						</view>
+						<view class="btn-text"><text>客服</text></view>
+					</view>
+					<view class="btn-view">
+						<view class="btn-icon">
+							<image src="../../../static/icons/card.png"></image>
+						</view>
+						<view class="btn-text"><text>购物车</text></view>
+					</view>
+				</view>
+
+				<view class="commodityList-btn-text">
+					<view class="btn-text-shopping"><text>加入购物车</text></view>
+					<view class="btn-text-immediately" bindtap="immediatelyClick"><text>立即购买</text> </view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<van-popup
+  show="{{ selectshow }}"
+  position="bottom"
+  custom-style="height: 60%;"
+  bind:close="onClose"
+>
+		<view class="specification">
+				<view class="specification-top">
+					<view class="specification-top-img">
+						<image src="../../../static/imgs/timg1.jpg"></image>
+					</view>
+					<view class="specification-top-number">
+							<view class="specification-top-pcier">
+								<text>￥266.00</text>
+							</view>
+							<view class="specification-top-residue">
+								<text>剩余3件</text>
+							</view>
+					</view>
+				</view>
+				<view class="specification-center">
+						<view class="center-capacity">
+								<view class="capacity-title">容量</view>
+								<view class="capacity-specification">
+									<view bindtap="capacityClick" wx:key="index" wx:for="{{capacityList}}" data-index="{{index}}" class="{{capacityIndex==index?'actives':''}}"><text>{{item.name}}</text></view>
+									
+								</view>
+						</view>
+						<view class="center-color">
+								<view class="capacity-title">颜色</view>
+								<view class="capacity-specification">
+									<view bindtap="colorClick" wx:key="index" wx:for="{{colorList}}" data-index="{{index}}" class="{{colorIndex==index?'actives':''}}"><text>{{item.name}}</text></view>
+								</view>
+						</view>
+				</view>
+				<view class="specification-numbers">
+				<text>购买数量</text>
+					<van-stepper value="{{ 1 }}" input-width="50rpx" button-size="40rpx" bind:change="onChange" disable-input/>
+				</view>
+				<view class="specification-btn">
+					<van-button size="small" color="#FE9B96" bind:click='affirm' round type="info" block>确认订单</van-button>
+				</view>
+		</view>
+
+	</van-popup>
+
+	
+</view>

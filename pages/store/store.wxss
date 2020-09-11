@@ -1,0 +1,87 @@
+.containers{
+  height: 100%;
+  background: #fff;
+}
+.store-content{
+  display: flex;
+  background: #fff;
+}
+page{
+  height: 100%;
+}
+.store-serch{
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+}
+.van-cell{
+  padding: var(--cell-vertical-padding,0px) var(--cell-horizontal-padding,0px)!important;
+}
+.store-serch-title{
+  position: absolute;
+  width: 90%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 88rpx;
+  background: #eee;
+  border-radius: 10rpx;
+}
+.store-serch input{
+  height: 100%;
+  /* border: 2rpx solid #eee; */
+  /* border-radius: 15rpx; */
+  padding: 0 80rpx;
+}
+.store-serch image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-40%);
+}
+
+.store-name{
+  height: 100%;
+  position: fixed;
+  top: 8%;
+  background:#fff;
+  width: 25%;
+}
+.store-name view{
+  white-space: nowrap;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.store-name-scroll{
+  height: 93vh;
+  background: #eee;
+  margin-bottom: 100rpx;
+  overflow: auto
+}
+.actives{
+  background: #fff;
+}
+.store-particulars{
+  height: 100%;
+  margin-left: 26%;
+  margin-top: 8%;
+  flex:1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* justify-content: space-between; */
+}
+.store-particulars>view{
+  width: 180rpx;
+  /* margin: 50rpx 30rpx; */
+  text-align: center;
+  margin-top: 50rpx;
+  font-size: 35rpx;
+}
+.store-particulars image{
+  width: 130rpx;
+  height: 120rpx;
+}

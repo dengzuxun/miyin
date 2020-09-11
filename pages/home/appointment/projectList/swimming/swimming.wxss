@@ -1,0 +1,180 @@
+.container {
+  background-color: #fff;
+}
+
+.swimming {
+  margin: 0 20rpx;
+}
+
+.swimming-item {
+  height: 176rpx;
+}
+
+.swimming-item::after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.swimming-item image {
+  width: 100%;
+  height: 176rpx;
+}
+
+.swimming-list-item {
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 28rpx;
+  color: #A7A7A7;
+}
+
+.swimming-list-title {
+  font-size: 35rpx;
+  color: #000000;
+}
+
+.swimming-list-next {
+  color: #CC9933;
+}
+
+/* 项目描述结束 */
+
+/* 地图开始 */
+.swimming-map {
+  text-align: left;
+}
+
+/* 地图结束 */
+
+/* 导师选择 */
+.advisor-list-swiper {
+  height: 242rpx;
+}
+
+.swimming-advisor-current {
+  width: 230rpx !important;
+  text-align: center;
+}
+
+.box {
+  margin: 0 10rpx;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.box view:nth-of-type(2) {
+  padding-bottom: 10rpx;
+}
+
+.icon-font {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.actives {
+  border: 2rpx solid #CC9933;
+
+}
+
+.advisor-current-img {
+  margin-top: 23rpx;
+  margin-bottom: 28rpx;
+}
+
+.advisor-current-img image {
+  height: 128rpx;
+  width: 128rpx;
+  border-radius: 50%;
+}
+
+/* 导师日期 */
+.advisor-data {
+  margin-top: 30rpx;
+}
+
+
+
+.scroll-data {
+  display: flex;
+  white-space: nowrap;
+  padding-bottom: 34rpx;
+}
+
+.scroll-data>view {
+  margin: 0 15rpx;
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #169BD5;
+  border-radius: 20rpx;
+  padding: 0 15rpx;
+  color: #fff;
+  position: relative;
+}
+.scroll-data>.active::after {
+  content: '';
+  border: 25rpx solid transparent;
+  border-bottom-color: #DEDEDE;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom:-34rpx;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+/* 导师结束 */
+.radio-select {
+  background: #DEDEDE;
+  border-radius: 20rpx;
+  padding: 31rpx;
+}
+
+.radio-select .already {
+  margin-top: 10rpx;
+  background: #eee;
+  /* padding: 32rpx 20rpx; */
+  font-size: 28rpx;
+}
+
+.forbid {
+  color: #000000;
+}
+
+.activeClock {
+  color: #CC9933;
+}
+
+.radio-select-list {
+  /* padding: 0 20rpx; */
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  background: #EEE;
+}
+
+/* 弹出框的内容 */
+.appointment-Dialog{
+  text-align: center;
+}
+.appointment-Dialog image{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+}
+.appointment-dialog-success{
+  width: 192rpx;
+  height: 192rpx;
+  margin: 0 auto;
+  padding: 40rpx 0;
+  
+}
+.appointment-dialog-text{
+  width: 313rpx;
+  margin: 0 auto;
+}

@@ -1,0 +1,36 @@
+.container{
+  background: #eee;
+  padding-bottom: 120rpx;
+}
+
+.addresslist-list{
+  margin-top: 20rpx;
+  padding: 0 38rpx;
+  background: #fff;
+}
+
+.van-col--2{
+  margin-top: 30rpx;
+}
+.fr .van-icon{
+  margin-left: 30rpx;
+}
+
+.addresslist-btns{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* transform: translateX(-50%); */
+  color: #fff;
+  background: #fff;
+}
+.btns{
+  width: 80%;
+  background:#FF928D;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  text-align: center;
+  height:80rpx;
+  line-height:80rpx;
+}

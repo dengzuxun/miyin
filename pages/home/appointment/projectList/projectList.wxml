@@ -1,0 +1,61 @@
+<view class='container'>
+	<view class="projectList">
+		<view class="projectList-img">
+			<image src="../../../../static/imgs/demo.png"></image>
+		</view>
+		<view class="projectList-list">
+
+			<view class="projectList-name">
+				<view class="projectList-item-1">
+					<view class="item-1-left">{{projectDetails.name}}</view>
+					<view class="item-1-right">已预约: <text> 129</text>次</view>
+				</view>
+				<view class="projectList-item-2">
+					<text>{{projectDetails.detail}}</text>
+				</view>
+				<view class="projectList-item-3"><text>消耗: </text><text>{{projectDetails.price}}次</text></view>
+			</view>
+			<view class="projectList-title">
+				<view class="projectList-title-name"><text>服务详情</text></view>
+				<view class="projectList-title-img">
+					<image src="{{projectDetails.img}}"></image>
+				</view>
+			</view>
+			<!--  -->
+			<view class="projectList-advisor">
+				<view class="projectList-advisor-title"><text>导师阵容</text></view>
+
+				<view class="projectList-advisor-item" wx:for="{{projectDetails.teachaer}}" wx:key="index">
+					<van-row>
+						<van-col class="advisor-item-img" span="5">
+							<image mode="center" src="{{item.img}}"></image>
+						</van-col>
+						<van-col span="19">
+							<!-- <view class="col"> -->
+							<van-row class="advisor-name">
+								<van-col span="8"><text class="advisor-name-title">{{item.name}}</text></van-col>
+								<van-col span="11" offset="5">
+									<van-icon name="phone" /><text>{{item.mobile}}</text>
+								</van-col>
+							</van-row>
+							<!-- </view>
+						<view class="col">
+						 -->
+							<text>{{item.brief_introduction}}</text>
+
+							<!-- </view> -->
+						</van-col>
+					</van-row>
+				</view>
+			</view>
+		</view>
+		<view class="advisor-btn" >
+			<view class="advisor-btns" wx:if="{{projectDetails.status}}">
+					<navigator url="/pages/home/appointment/projectList/swimming/swimming" open-type="navigate">
+					立即预约
+					</navigator>
+			</view>
+		
+		</view>
+	</view>
+</view>

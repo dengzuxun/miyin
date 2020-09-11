@@ -1,0 +1,81 @@
+<template name="orderlistItem">
+	<view class="orderlistItems">
+		<!-- 商品列表 -->
+		<view class="orderlistItems-list" wx:for="{{orderlistItem}}" wx:key="index">
+			<view class="orderlistItems-list-top">
+				<view class="orderlistItems-date"><text>{{item.date}}</text><text>{{item.time}}</text></view>
+				<view class="orderlistItems-status">
+					<block>
+						<text wx:if="{{item.status == 0 }}">待支付</text>
+						<text wx:elif="{{item.status == 1}}">卖家已发货</text>
+						<text wx:elif="{{item.status == 2}}">待卖家发货</text>
+						<text wx:else>已完成</text>
+					</block>
+				</view>
+			</view>
+
+			<view class="orderlistItems-list-content">
+				<view class="order-commodity-introduce">
+					<navigator url="/pages/my/orderlist/orderdetail/orderdetail" open-type="navigate">
+						<van-row>
+							<van-col custom-class="order-col" span="7">
+								<image src="../../../static/imgs/timg2.jpg"></image>
+								<view class="commodity-introduce-img"></view>
+							</van-col>
+							<van-col span="17">
+								<view class="commodity-introduce-text">
+									<text>{{item.title}}</text>
+								</view>
+								<view class="commodity-introduce-price">
+									<van-row style="font-size:22rpx;color:#AAAAAA;">
+										<van-col span="4">
+											<text>1段</text>
+										</van-col>
+										<van-col span="4" offset="16" style="text-align:right;">
+											<text>×1</text>
+										</van-col>
+									</van-row>
+								</view>
+								<view class="commodity-introduce-number">
+									<text style="font-size:22rpx">共1件商品 合计：</text>
+									<text style="font-size:28rpx">￥{{item.price}}</text>
+								</view>
+							</van-col>
+						</van-row>
+					</navigator>
+				</view>
+			</view>
+
+			<view class="orderlistItems-list-btns">
+				<!-- 待支付 -->
+				<view class="orderlistItems-list-item" wx:if="{{item.status==0}}">
+					<view bindtap="cancelClick">取消订单</view>
+					<view data-id="{{item.id}}">去支付</view>
+				</view>
+				<!-- 以发货 -->
+				<view class="orderlistItems-list-item" wx:if="{{item.status==1}}">
+					<view bindtap="cancelClick">取消订单</view>
+					<view>查看物流</view>
+					<view>确认收货</view>
+				</view>
+				<!-- 待发货 -->
+				<view class="orderlistItems-list-item" wx:if="{{item.status==2}}">
+					<view>
+						<navigator url="/pages/my/refund/refund" open-type="navigate">申请退款</navigator>
+					</view>
+					<view>提醒发货</view>
+				</view>
+				<!-- 以完成 -->
+				<view class="orderlistItems-list-item" wx:if="{{item.status==3}}">
+					<view>开发票</view>
+					<view>查看发票</view>
+					<view>在次购买</view>
+				</view>
+			</view>
+		</view>
+		<!-- 商品列表 -->
+
+		<!-- 弹框 -->
+		<van-dialog id="van-dialog" />
+	</view>
+</template>

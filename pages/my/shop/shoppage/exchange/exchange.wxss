@@ -1,0 +1,23 @@
+.container{
+  background-color: #fff;
+}
+.exchange{
+  width: 539rpx;
+  height: 416rpx;
+  margin: 0 auto;
+}
+.exchange image{
+  width: 539rpx;
+  height: 416rpx;
+}
+.bottom-button{
+width: 400rpx;
+margin: 0 auto;
+margin-top: 50rpx;
+padding: 15rpx 0;
+color:#CC9934 ;
+border-radius: 30rpx;
+border: 1rpx solid #CC9934;
+background-color: #fff;
+text-align: center;
+}

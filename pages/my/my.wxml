@@ -1,0 +1,68 @@
+<view class="container">
+	<view class="my-bak">
+		<view class="my-title">
+			<view class="my-img">
+				<image src="../../static/imgs/demo.png"></image>
+			</view>
+			<view class="my-name">
+				<text>昵称</text>
+				<text>159****6289</text>
+				<view class="my-input" bindtap="setUserName">
+					<input placeholder-style="color:#fff" disabled="{{true}}" placeholder="请输入您的真实名字"></input>
+					<van-icon name="edit" size="25rpx" color="#eee" />
+				</view>
+			</view>
+			<view class="my-box my-list-box">
+				<view wx:for="{{myIndex}}" wx:key="index">
+					<navigator url="{{item.path}}" open-type="navigate">
+						<view>{{item.value}}</view>
+						<view><text>{{item.name}}</text></view>
+					</navigator>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="my-Order-items">
+		<block>
+			<view class="my-Order-item">
+				<view class="my-Order-title" bindtap="toOrder">
+					<view><text>我的订单</text></view>
+					<view><text>查看全部 ></text></view>
+				</view>
+				<view class="my-Order-list">
+					<view class="my-Order-btn" wx:for="{{myOrder}}" wx:key="index"  bindtap="serveClick" data-orderitem="{{index+1}}" >
+						<view class="my-Order-img">
+							<image src="{{item.urlImg}}"></image>
+						</view>
+						<view><text>{{item.name}}</text></view>
+					</view>
+				</view>
+			</view>
+		</block>
+
+		<block>
+			<view class="my-service">
+				<view><text>我的服务</text></view>
+				<view class="my-service-list">
+					<view class="my-service-nape" wx:for="{{myServe}}" wx:key="index">
+						<navigator url="{{item.path}}" open-type="navigate">
+							<view class="my-service-img">
+								<image src="{{item.urlImg}}"></image>
+							</view>
+							<view><text>{{item.name}}</text></view>
+						</navigator>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+	<van-dialog use-slot title="真实姓名" showCancelButton data-users="{{values}}" show="{{ userName }}" bind:confirm="affirmName">
+		<!-- <input value="" placeholder="请输入你的真实姓名"></input> -->
+		<van-cell-group>
+			<van-field  model:value="{{ values }}" placeholder="请输入你的真实姓名" border="{{ false }}"/>
+		</van-cell-group>
+	</van-dialog>
+</view>

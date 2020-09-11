@@ -1,0 +1,54 @@
+/* pages/my/shop/shoppage/record/record.wxss */
+.container {
+  background: #F7F7F7;
+}
+.record-list{
+  margin-bottom: 20rpx;
+}
+
+.record-date {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 28rpx;
+  padding-right: 50rpx;
+  background: #fff;
+  line-height: 70rpx;
+  border-top: 2rpx solid #eee;
+}
+
+
+.record-content-number {
+  display: flex;
+  justify-content: space-between;
+}
+
+.record-content {
+  padding-left: 28rpx;
+  padding-right: 50rpx;
+  height: 148rpx;
+  line-height: 74rpx;
+}
+
+.record-mark {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20rpx 50rpx 10rpx 28rpx;
+  background: #fff;
+  font-size: 26rpx;
+}
+.btn{
+  width: 152rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  border-radius: 40rpx;
+  text-align: center;
+}
+.btns {
+  border: 1rpx solid #CCCCCC;
+  color: #AAAFB5;
+  margin-right: 20rpx;
+}
+.btnss {
+  border: 1rpx solid #E34749;
+  color: #E34749;
+}

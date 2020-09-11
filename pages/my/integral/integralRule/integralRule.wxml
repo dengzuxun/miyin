@@ -1,0 +1,82 @@
+<view class="cntainer">
+	<view class="integralRule">
+		<view class="integralRule-top">
+			<view class="integralRule-top-title"><text>积分有效期</text></view>
+			<view class="integralRule-top-rule">
+				<view>1、每年1月1日-6月30日期间获得积分在当年8月31日过期;</view>
+				<view>2、每年7月1日-12月31日期间获得积分在次年2月28日过期。</view>
+			</view>
+		</view>
+		<view class="integralRule-content">
+			<view class="content-title"><text>如何获取积分?</text></view>
+			<view class="content-list">
+				<view class="content-list-item">
+					<view class="list-item-title">新手任务</view>
+					<view class="list-item-content">(新手任务权第一次完成获取奖励)</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">手机注册</view>
+					<view class="list-item-content">+100</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">添加收货地址</view>
+					<view class="list-item-content">+50</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">关注公众号</view>
+					<view class="list-item-content">+20</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">首次成功购买商品</view>
+					<view class="list-item-content">+20</view>
+				</view>
+			</view>
+
+			<view class="content-list">
+				<view class="content-list-item">
+					<view class="list-item-title">每日任务</view>
+					<view class="list-item-content">(每日任务可以每天都来参加,但没项任务有单日获取上线)</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">每日签到</view>
+					<view class="list-item-content">+10</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">社区分享小程序到群聊发帖</view>
+					<view class="list-item-content">+50</view>
+				</view>
+        	<view class="content-list-item">
+					<view class="list-item-title">社区发帖</view>
+					<view class="list-item-content">+30</view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">社区发帖</view>
+					<view class="list-item-content">+10 <text>(每日上限50积分)</text></view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">分享文章</view>
+					<view class="list-item-content">+10 <text>(每日上限50积分)</text> </view>
+				</view>
+			</view>
+
+			<view class="content-list">
+				<view class="content-list-item">
+					<view class="list-item-title">其他任务</view>
+					<view class="list-item-content"></view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">宝宝生日</view>
+					<view class="list-item-content">+500 <text style="font-size:20rpx;color:#e3e3e3;">(每个宝宝每一年只可领一次)</text></view>
+				</view>
+				<view class="content-list-item">
+					<view class="list-item-title">活动积分</view>
+					<view class="list-item-content">不定期活动设置的积分奖励</view>
+				</view>
+			
+			</view>
+
+
+
+		</view>
+	</view>
+</view>

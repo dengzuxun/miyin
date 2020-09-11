@@ -1,0 +1,12 @@
+.refund{
+  text-align: center;
+  margin: 0 100rpx;
+  font-size: 30rpx;
+}
+.refund-title,.refund-text{
+  line-height: 50rpx;
+}
+.refund-number{
+  margin-top: 100rpx;
+  color: #FF9B96;
+}
