@@ -69,15 +69,39 @@ export function get_userprojectDetail(data){
   })   
 }
 
+// 取消以预约项目
+export function delete_userprojectDetail(data){
+  return api_request({
+    url:'/user/project',
+    method:'DELETE',
+    params:data
+  })   
+}
 
 
+// 获取套餐购买记录
+export function get_matchingmatchingorder(data){
+  return api_request({
+    url:'/user/matching/order',
+    method:'GET',
+    params:data
+  })   
+}
 
 // 获取预约套餐列表
-
 export function get_projectmatching(data){
   return api_request({
     url:'/project/matching',
     method:'GET',
+    params:data
+  })   
+}
+
+// 取消套餐
+export function delete_matchingorde(data){
+  return api_request({
+    url:'/user/matching/order',
+    method:'DELETE',
     params:data
   })   
 }

@@ -11,12 +11,14 @@ Page({
     shopType: [],
     getList: '',
     synthesizes: true,
+    isload:false,
     volumes:0,
     prices: true,
+    page:1,
     volumeIndex: 0,
     priceIndex: 0,
-    daindex1:'a',
-    daindex2:'a'
+    daindex1:'a',//销量排序
+    daindex2:'a'//销量排序
  
   },
   getdata(){
@@ -90,73 +92,7 @@ Page({
   },
 
 
-  // orderClick(e) {
-  //   // console.log(e.currentTarget.dataset.index)
-  //   let typeorder = e.currentTarget.dataset.types
-  //   let index = e.currentTarget.dataset.index
-  //   this.volumes = typeorder=="price"?'1':'2'
-
-
-
-  //   // if (typeorder == "volume") {
-  //   //   if (this.volumes) {
-  //   //     getShopColumn({
-  //   //       column_id: 1,
-  //   //       sales: "DESC"
-  //   //     }).then((res) => {
-  //   //       this.shopType = res.data
-  //   //       this.setData({
-  //   //         shopType: this.shopType.list
-  //   //       })
-  //   //       console.log(res)
-  //   //     }).catch((err) => {
-  //   //       console.log(err)
-  //   //     })
-  //   //   } else if (!this.volumes) {
-  //   //     getShopColumn({
-  //   //       column_id: 1,
-  //   //       sales: "ASC"
-  //   //     }).then((res) => {
-  //   //       this.shopType = res.data
-  //   //       this.setData({
-  //   //         shopType: this.shopType.list
-  //   //       })
-  //   //       console.log(res)
-  //   //     }).catch((err) => {
-  //   //       console.log(err)
-  //   //     })
-  //   //   }
-  //   // } else if (typeorder == "price") {
-  //   //   if (this.prices) {
-  //   //     getShopColumn({
-  //   //       column_id: 1,
-  //   //       sales: "DESC"
-  //   //     }).then((res) => {
-  //   //       this.shopType = res.data
-  //   //       this.setData({
-  //   //         shopType: this.shopType.list
-  //   //       })
-  //   //       console.log(res)
-  //   //     }).catch((err) => {
-  //   //       console.log(err)
-  //   //     })
-  //   //   } else if (!this.prices) {
-  //   //     getShopColumn({
-  //   //       column_id: 1,
-  //   //       sales: "ASC"
-  //   //     }).then((res) => {
-  //   //       this.shopType = res.data
-  //   //       this.setData({
-  //   //         shopType: this.shopType.list
-  //   //       })
-  //   //       console.log(res)
-  //   //     }).catch((err) => {
-  //   //       console.log(err)
-  //   //     })
-  //   //   }
-  //   // }
-  // },
-
+ 
 
 
   /**
@@ -218,6 +154,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+
 
   },
 

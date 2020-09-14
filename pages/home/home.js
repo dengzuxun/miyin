@@ -16,9 +16,15 @@ Page({
   homeTypeclick(e) {
     console.log(e)
     var dataTyoe = e.target.dataset.index
+    var dataId = e.target.dataset.id
     this.setData({
       homeTypeIndex: dataTyoe
     })
+
+    
+
+
+
   },
   articleClick() {
     wx.navigateTo({
@@ -37,7 +43,6 @@ Page({
       this.setData({
         homeData:res.data.list
       })
-      console.log(res, "aaa")
     }).catch((err) => {
       console.log(err)
     })
@@ -47,7 +52,6 @@ Page({
       this.setData({
         homeType: res.data
       })
-      console.log(res)
     }).catch((err) => {
       console.log(err)
     })

@@ -2,7 +2,7 @@
 
 <view class="container">
 	<view class="Myreel">
-    <view wx:key="index" wx:for="{{myreelPage}}" bindtap="myreelTab" id="{{index}}" class="{{myreelIndex==index?'actives':''}}">{{item.name}}<text wx:if="{{index==0}}">({{index+5}})</text></view>
+    <view wx:key="index" wx:for="{{myreelPage}}" bindtap="myreelTab" id="{{index}}" class="{{myreelIndex==index?'actives':''}}">{{item.name}}<text wx:if="{{index==0}}">({{rel}})</text></view>
 	</view>
 	<template is="reelList" data="{{receiveOrder,myreelIndex}}"></template>
 </view>

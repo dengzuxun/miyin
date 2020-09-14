@@ -48,6 +48,9 @@
 /* 地图结束 */
 
 /* 导师选择 */
+.swimming-advisor-list{
+  margin-top: 20rpx;
+}
 .advisor-list-swiper {
   height: 242rpx;
 }

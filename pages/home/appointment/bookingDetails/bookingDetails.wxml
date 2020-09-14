@@ -7,12 +7,12 @@
 		<view class="booking-details-content">
 			<view class="booking-details-center">
 				<view class="booking-details-left">
-					<image src="../../../../static/imgs/timg1.jpg"></image>
+					<image src="{{bookingList.project.img}}"></image>
 				</view>
 				<view class="booking-details-right">
-					<view class="booking-details-title">项目</view>
-					<view class="booking-details-content">被动操+洗澡+游泳+穿衣</view>
-					<view class="booking-details-next"><text>消耗: </text><text>1次</text></view>
+					<view class="booking-details-title">{{bookingList.project.name}}</view>
+					<view class="booking-details-content">{{brief_introduction}}</view>
+					<view class="booking-details-next"><text>消耗: </text><text>{{bookingList.project.price}}次</text></view>
 				</view>
 			</view>
 		</view>
@@ -27,20 +27,47 @@
 					<view class="details-list-content">深圳市南山区科技园东方大厦2520</view>
 				</view>
 			</view>
-   
+			<view class="details-list-get">
+				<view class="details-list-icon">
+					<image src="../../../../static/icons/mineS.png"></image>
+				</view>
+				<view class="details-list-data">
+					<view class="details-list-name">预约人:</view>
+					<view class="details-list-content">{{bookingList.user_name}},{{bookingList.app_mobile}}</view>
+				</view>
+			</view>
+			<view class="details-list-get">
+				<view class="details-list-icon">
+					<image src="../../../../static/icons/mineS.png"></image>
+				</view>
+				<view class="details-list-data">
+					<view class="details-list-name">预约信息:</view>
+					<view class="details-list-content">{{bookingList.teacher.name}},{{bookingList.teacher.created_at}}</view>
+				</view>
+			</view>
+			<view class="details-list-get">
+				<view class="details-list-icon">
+					<image src="../../../../static/icons/mineS.png"></image>
+				</view>
+				<view class="details-list-data">
+					<view class="details-list-name">备注留言:</view>
+					<view class="details-list-content">深圳市南山区科技园东方大厦2520</view>
+				</view>
+			</view>
 
-<!-- 订单编号 -->
-      <view class="details-order">
-          <view class="order">
-            <text>订单编号：</text> <text> 123456789</text>
-          </view>
-          <view class="order-tiem">
-            <text>预约下单时间：</text><text> 2020.07.12</text><text> 10: 30</text>
-          </view>
-      </view>
-      <view class="order-btns">
-        <view class="order-no">取消预约</view>
-      </view>
+
+			<!-- 订单编号 -->
+			<view class="details-order">
+				<view class="order">
+					<text>订单编号：</text> <text> {{bookingList.number}}</text>
+				</view>
+				<view class="order-tiem">
+					<text>预约下单时间：</text><text> {{bookingList.created_at}}</text>
+				</view>
+			</view>
+			<view class="order-btns" wx:if="{{bookingList.status==2}}">
+				<view class="order-no" data-id="{{bookingList.id}}" bindtap="cancels">取消预约</view>
+			</view>
 		</view>
 	</view>
 </view>

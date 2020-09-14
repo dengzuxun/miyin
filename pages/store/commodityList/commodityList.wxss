@@ -20,6 +20,7 @@
   color: #fff;
   font-weight: 500;
   margin-right: 10rpx;
+  vertical-align: middle;
 }
 .commodityList-particulars_top{
   position: relative;
@@ -36,6 +37,15 @@
   font-size: 35rpx;
   font-weight: 600;
   margin-right: 15rpx;
+}
+
+.commodityList-img-contante{
+    margin: 0 auto;
+    width: 99%;
+}
+.commodityList-imgs image{
+  width: 750rpx;
+  height: 750rpx;
 }
 .particulars_top_share{
   width: 95rpx;
@@ -175,11 +185,12 @@
   display: flex;
   flex-wrap: wrap; 
   font-size: 24rpx;
+  padding: 10rpx;
 }
 
 .capacity-specification view{
   margin-top: 20rpx;
-  padding:2rpx 22rpx;
+  padding:0 22rpx;
   background: #EEEEEE;
   margin-right: 50rpx;
   border-radius: 5rpx;

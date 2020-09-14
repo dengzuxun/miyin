@@ -1,11 +1,12 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/store/commodityList/commodityList",
+    "pages/home/appointment/bookingDetails/bookingDetails",
     "pages/my/my",
     "pages/my/addresslist/setaddress/setaddress",
-    "pages/store/commodityList/commodityList",
     "pages/store/showproductList/showproductList",
-    "pages/store/store", 
+    "pages/store/store",
     "pages/my/shop/shoppage/record/record",
     "pages/home/appointment/purchaseDistory/purchaseDistory",
     "pages/home/appointment/projectList/swimming/swimming",
@@ -26,7 +27,6 @@
     "pages/home/article/article",
     "pages/my/orderlist/invoice/invoice",
     "pages/my/orderlist/orderdetail/orderdetail",
-    "pages/home/appointment/bookingDetails/bookingDetails",
     "pages/my/orderlist/orderlist",
     "pages/gather/welfare/welfare",
     "pages/my/integral/integral",
@@ -38,7 +38,8 @@
     "pages/home/appointment/appointment",
     "pages/commodity/commodity",
     "pages/shopping/shopping",
-    "pages/my/refund/refund"
+    "pages/my/refund/refund",
+    "pages/login/login"
   ],
   "usingComponents": {
     "van-row": "@vant/weapp/row/index",
@@ -48,7 +49,8 @@
     "van-icon": "@vant/weapp/icon/index",
     "van-field": "@vant/weapp/field/index",
     "van-submit-bar": "@vant/weapp/submit-bar/index",
-    "van-toast": "@vant/weapp/toast/index"  
+    "van-toast": "@vant/weapp/toast/index",
+    "van-loading": "@vant/weapp/loading/index"
   },
   "window": {
     "backgroundTextStyle": "light",

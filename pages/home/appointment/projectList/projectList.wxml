@@ -4,11 +4,9 @@
 			<image src="../../../../static/imgs/demo.png"></image>
 		</view>
 		<view class="projectList-list">
-
 			<view class="projectList-name">
 				<view class="projectList-item-1">
 					<view class="item-1-left">{{projectDetails.name}}</view>
-					<view class="item-1-right">已预约: <text> 129</text>次</view>
 				</view>
 				<view class="projectList-item-2">
 					<text>{{projectDetails.detail}}</text>
@@ -49,13 +47,12 @@
 				</view>
 			</view>
 		</view>
-		<view class="advisor-btn" >
-			<view class="advisor-btns" wx:if="{{projectDetails.status}}">
-					<navigator url="/pages/home/appointment/projectList/swimming/swimming" open-type="navigate">
-					立即预约
-					</navigator>
+		<view class="advisor-btn">
+			<view class="advisor-btns">
+				<view bindtap="appointments" data-id="{{projectDetails.id}}" wx:if="{{userinfon.appointment_number<projectDetails.price}}">立即预约</view>
+				<view bindtap="buyadd"  wx:else>购买套餐</view>
 			</view>
-		
+
 		</view>
 	</view>
 </view>

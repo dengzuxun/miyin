@@ -1,6 +1,6 @@
 @import './miniprogram_npm/@vant/weapp/common//index.wxss';
 
-@import './style/iconfont.wxss'
+@import './style/iconfont.wxss';
 /**app.wxss**/
 .container {
   background: #F8F8F8;

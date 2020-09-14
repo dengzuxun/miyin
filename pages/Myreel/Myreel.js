@@ -1,3 +1,7 @@
+import {
+  getcoupon
+} from "../../utils/shop"
+
 Page({
 
 
@@ -5,26 +9,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show:true,
-    receiveOrder:[
-      {"price":10,"condition":"1000","type":"奶粉类专用卷","gitdate":"2020-04-09","status":0},
-      {"price":130,"condition":"10004","type":"奶粉类专用卷","gitdate":"2020-05-09","status":0},
-      {"price":120,"condition":"10002","type":"奶粉类专用卷","gitdate":"2020-06-09","status":0},
-      {"price":110,"condition":"10003","type":"奶粉类专用卷","gitdate":"2020-07-09","status":0},
-      {"price":13,"condition":"1000","type":"奶粉类专用卷","gitdate":"2020-08-09","status":0},
+    show: true,
+    receiveOrder: [],
+    myreelPage: [{
+        "name": "未使用"
+      },
+      {
+        "name": "已使用"
+      },
+      {
+        "name": "已过期"
+      },
     ],
-    myreelPage:[
-      {"name":"未使用"},
-      {"name":"已使用"},
-      {"name":"已过期"},
-    ],
-    myreelIndex:0
-    
+    myreelIndex: 0,
+    rel:0,
   },
-  
+
 
   //使用卷
-  getRell(){
+  getRell() {
     wx.switchTab({
       url: '/pages/store/store'
     })
@@ -32,35 +35,54 @@ Page({
 
 
   // 切换状态
-  myreelTab(e){
-      console.log(e)
-var  receiveOrders=[
-  {"price":10,"condition":"1000","type":"奶粉类专用卷","gitdate":"2020-04-09","status":1},
-  {"price":130,"condition":"10004","type":"奶粉类专用卷","gitdate":"2020-05-09","status":1},
-  {"price":110,"condition":"10003","type":"奶粉类专用卷","gitdate":"2020-07-09","status":1},
-  {"price":13,"condition":"1000","type":"奶粉类专用卷","gitdate":"2020-08-09","status":1}
-] 
-  if(e.target.id==1){
-    this.setData({
-      receiveOrder:receiveOrders
-    })
-  }
+  myreelTab(e) {
 
-
-
-      this.setData({
-        myreelIndex:e.target.id
-      })
-
+    if (e.target.id == 2) {
+      this.getcoupon(2)
+      
+    } else if (e.target.id == 1) {
+      this.getcoupon(1)
+    } else if (e.target.id == 0) {
+      this.getcoupon(0)
+    }
 
   },
-  
+
+
+  getcoupon(nus) {
+    //获取优惠卷
+    getcoupon({
+      open_id: "openid",
+      status: nus
+    }).then((res) => {
+      console.log(res)
+      this.setData({
+        receiveOrder: res.data.list,
+        myreelIndex:nus
+      })
+    }).catch((err) => {
+      console.log(err)
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //获取未使用优惠卷
+    getcoupon({
+      open_id: "openid",
+      status:0
+    }).then((res) => {
+      console.log(res)
+      this.setData({
+        receiveOrder: res.data.list,
+        rel:res.data.count
+      })
+    }).catch((err) => {
+      console.log(err)
+    })
   },
 
   /**

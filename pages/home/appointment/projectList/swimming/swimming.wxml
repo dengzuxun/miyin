@@ -4,23 +4,23 @@
 		<view class="swimming-item">
 			<van-row>
 				<van-col span="6">
-					<image src="../../../../../static/imgs/timg1.jpg"></image>
+					<image src="{{Information.img}}"></image>
 				</van-col>
 				<van-col offset="1" span="17">
 					<van-row>
 						<view class="swimming-list-item">
 							<van-row>
-								<text class="swimming-list-title">项目 3</text>
+								<text class="swimming-list-title">{{Information.name}}</text>
 							</van-row>
 						</view>
 						<view class="swimming-list-item">
 							<van-row>
-								<text>被动操+洗澡+游泳+穿衣</text>
+								<text>{{Information.brief_introduction}}</text>
 							</van-row>
 						</view>
 						<view class="swimming-list-item">
 							<van-row>
-								<text class="swimming-list-next">消耗: </text><text class="swimming-list-next">2 次</text>
+								<text class="swimming-list-next">消耗: </text><text class="swimming-list-next">{{Information.price}} 次</text>
 							</van-row>
 						</view>
 					</van-row>
@@ -32,8 +32,8 @@
 
 		<view class="swimming-users">
 			<van-cell-group>
-				<van-field value="{{ username }}" label="预约人:" placeholder="请输入用户名" />
-				<van-field value="{{ password }}" type="number" label="手机 :" placeholder="请输入密码" />
+				<van-field value="{{ users.name }}" label="预约人:" placeholder="请输入用户名" />
+				<van-field value="{{ users.mobile }}" type="number" label="手机 :" placeholder="请输入密码" />
 				<van-field value="{{ password }}" type="textarea" label="备注 :" placeholder="选项,50字以内" autosize="{{true}}" maxlength="50" />
 			</van-cell-group>
 		</view>
@@ -59,7 +59,7 @@
 		<view class="advisor-data">
 			<scroll-view scroll-x>
 				<view class="scroll-data">
-					<view class="{{activeIndex==index?'active':''}}" data-i="{{index}} " bindtap="setIndex" wx:key="index" wx:for="{{datae}}">{{item.month}}-{{item.day}}</view>
+					<view class="{{activeIndex===index?'active':''}}" data-i="{{index}} " bindtap="setIndex" wx:key="index" wx:for="{{datae}}">{{item.month}}-{{item.day}}</view>
 				</view>
 			</scroll-view>
 		</view>
@@ -111,7 +111,7 @@
 		<view>
 			<van-button block type="info" bind:click="appointmentSubmit">立即预约</van-button>
 		</view>
-		<van-dialog use-slot title="" show="{{ falg }}" show-cancel-button bind:confirm="getUserInfo" cancel-button-text="返回首页" confirm-button-text="查看详情" bind:cancel="onClose">
+		<van-dialog use-slot title="" show="{{ falg }}" show-cancel-button bind:confirm="getUserInfos" cancel-button-text="返回首页" confirm-button-text="查看详情" bind:cancel="onClose">
 
 			<view class="appointment-Dialog">
 				<view class="appointment-dialog-success">

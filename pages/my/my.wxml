@@ -13,10 +13,24 @@
 				</view>
 			</view>
 			<view class="my-box my-list-box">
-				<view wx:for="{{myIndex}}" wx:key="index">
-					<navigator url="{{item.path}}" open-type="navigate">
-						<view>{{item.value}}</view>
-						<view><text>{{item.name}}</text></view>
+				<view>
+					<navigator url="/pages/my/integral/integral" open-type="navigate">
+						<view>{{integral}}</view>
+						<view><text>积分</text></view>
+					</navigator>
+				</view>
+
+				<view>
+					<navigator url="/pages/Myreel/Myreel" open-type="navigate">
+						<view>{{ree}}</view>
+						<view><text>优惠卷</text></view>
+					</navigator>
+				</view>
+
+				<view>
+					<navigator url="/pages/my/articlecollect/articlecollect" open-type="navigate">
+						<view>{{article}}</view>
+						<view><text>文章收藏</text></view>
 					</navigator>
 				</view>
 			</view>

@@ -1,16 +1,16 @@
-<template name="orderSelectPage">
 	<view class="container">
 		<view class="order-select-page">
 
 			<!-- 快递配送地址 -->
-			<view class="order-site" wx:if="{{selectIndex==0}}" catchtap="select">
+			<view class="order-site"  wx:if="{{selectIndex==0}}"  catchtap="select">
 				<van-row>
 					<van-col custom-class="set" span="3">
 						<van-icon name="location" size="60rpx" />
 					</van-col>
 					<van-col custom-class="get" span="19">
-						<text>陈文</text> <text>157****227</text>
-						<view style="font-size:30rpx">广东省深圳市坂田区长坑路XX大道 </view>
+						<text>{{sitedefault.name}}</text> <text>{{sitedefault.mobile}}</text>
+						<view style="font-size:30rpx">
+							{{sitedefault.province}}{{sitedefault.city}}{{sitedefault.county}}{{sitedefault.address}} </view>
 					</van-col>
 					<van-col custom-class="set" span="2">
 						<van-icon name="arrow" color="#656565" size="50rpx" />
@@ -27,35 +27,35 @@
 					</van-col>
 					<van-col span="6">
 						<view class="order-icon">
-							<van-icon custom-class="order-icont-item" color="#FF9B97" name="location-o" size="50rpx" bind:click="iconbtn" />
-							<van-icon custom-class="order-icont-items" color="#FF9B97" name="phone-o" size="50rpx" bind:click="iconbtn" />
+							<van-icon custom-class="order-icont-item" color="#FF9B97" name="location-o" size="50rpx"
+								bind:click="iconbtn" />
+							<van-icon custom-class="order-icont-items" color="#FF9B97" name="phone-o" size="50rpx"
+								bind:click="iconbtn" />
 						</view>
 					</van-col>
 				</van-row>
 			</view>
-
-
-
 
 			<!-- 商品描述 -->
 			<view class="order-commodity">
 				<view class="order-commodity-introduce">
 					<van-row>
 						<van-col custom-class="order-col" span="7">
-							<image src="../../../static/imgs/timg2.jpg"></image>
-							<view class="commodity-introduce-img"></view>
+							<image src="{{img}}"></image>
+							<!-- <view class="commodity-introduce-img"></view> -->
 						</van-col>
 						<van-col custom-class="" span="17">
 							<view class="commodity-introduce-text">
-								<text>Aptamil卓萃白金版 爱他美婴儿宝宝配方奶粉1段380g 0-6个月 </text>
+								<text>{{shoptitle}}</text>
 							</view>
 							<view class="commodity-introduce-price">
 								<van-row>
-									<van-col span="4">
-										<text style="font-size:18rpx;color:#999999">1段</text>
+									<van-col span="9">
+										<text style="font-size:18rpx;color:#999999">{{details}}</text>
 									</van-col>
-									<van-col span="9" offset="11">
-										<text style="color:#DF1212;font-size:24rpx;">￥128:00 </text><text style="font-size:24rpx;">×1</text>
+									<van-col span="9" offset="6">
+										<text style="color:#DF1212;font-size:24rpx;">￥{{price}}</text><text
+											style="font-size:24rpx;">×{{numbers}}</text>
 									</van-col>
 								</van-row>
 							</view>
@@ -74,21 +74,23 @@
 						</van-row>
 					</view>
 					<view class="order-reel">
-						<view class="order-reel-list">
+						<view class="order-reel-list" bindtap="unrollCoupon">
 							<van-row>
 								<van-col span="5">
 									<text>优惠券</text>
 								</van-col>
 								<van-col span="6" offset="13">
 									<view class="reel-number">
-										<van-row>
+										<van-row wx:if="{{!couponshow}}">
 											<van-col span="17">
-												<view class="order-text">2张可用</view>
+												<view class="order-text">{{coupon}}张可用</view>
 											</van-col>
 											<van-col>
 												<van-icon span="7" name="arrow" size="40rpx" />
 											</van-col>
 										</van-row>
+
+										<view style="text-align: right;color:red" wx:else>减{{countsvalue.price}}元</view>
 									</view>
 								</van-col>
 							</van-row>
@@ -109,18 +111,49 @@
 
 			<!-- 商品价格 -->
 			<view class="commodity-pirce">
-				<van-cell-group custom-class="pirce-list">
-					<van-cell title="商品金额" value="￥128.00" />
-					<van-cell title="优惠金额" value="-￥10.00" />
-					<van-cell title="运费" value="0.00" />
-					<van-cell title="合计" value="￥118.00" />
+				<van-cell-group>
+					<van-field value="{{ price }}" label="商品金额" disabled readonly input-align="right" />
+					<van-field value="{{ discounts }}" label="优惠金额" disabled readonly input-align="right" />
+					<van-field value="{{ freight }}" label="运费" disabled readonly input-align="right" />
+					<van-field value="{{sum}}" label="合计" disabled readonly input-align="right" />
 				</van-cell-group>
+
 			</view>
 
 			<view class="commodity-clearing">
-				<van-submit-bar price="{{ 11800 }}" button-text="提交" bind:submit="onSubmit" bar-class="footer" button-class="btn-class" />
+				<van-submit-bar price="{{sum*100 }}" button-text="提交" bind:submit="onSubmit" bar-class="footer"
+					button-class="btn-class" />
 			</view>
 
+			<!-- 优惠卷弹窗 -->
+			<van-action-sheet show="{{ hide }}" title="选择优惠卷" bind:close="couponIcon">
+				<van-radio-group custom-class="group-content" value="{{ coupondio }}" bind:change="onChangecoupon">
+					<view class="selecesite" wx:for="{{couponList}}"  wx:key="index">
+						<van-radio name="{{index}}">
+							<view>{{item.name}}</view>
+							<view>{{item.price}}</view>
+						</van-radio>
+					
+					</view>
+				</van-radio-group>
+			</van-action-sheet>
+
+			<!-- 地址弹窗 -->
+			<van-action-sheet show="{{ show }}" title="选择收货地址" bind:close="siseIcon">
+				<van-radio-group custom-class="group-content" value="{{ radio }}" bind:change="onChange">
+					<view class="selecesite" wx:for="{{siteList}}" wx:key="index">
+						<van-radio name="{{index}}">
+							<view><text wx:if="{{radio==index}}" class="default-text">默认</text><text>{{item.name}}</text><text>{{item.mobile}}</text></view>
+							<view><text style="color:#e5e5e5;">{{sitedefault.province}}{{sitedefault.city}}{{sitedefault.county}}{{sitedefault.address}}</text></view>
+						</van-radio>
+						<view class="icon">
+							<van-icon size="40rpx" name="edit" />
+						</view>
+					</view>
+				</van-radio-group>
+				<view class="action-btn">
+						新增地址
+				</view>
+			</van-action-sheet>
 		</view>
 	</view>
-</template>

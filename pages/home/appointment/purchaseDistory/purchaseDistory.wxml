@@ -1,6 +1,6 @@
 <view class="container">
 	<view class="record">
-		<view class="record-list" wx:for="{{3}}">
+		<view class="record-list" wx:for="{{matchingorder.list}}" wx:key ="index">
 			<view class="record-date">
 				<view class="record-date-dates">
 					<text>2020-06-14</text>
@@ -12,23 +12,25 @@
 
 			<view class="record-content">
 				<view class="record-content-name">
-					<text class="name-text">套餐名称套餐名称套餐名称套餐名称</text>
+					<text class="name-text">{{item.matching.name}}</text>
 				</view>
 				<view class="record-content-number">
 					<view class="number-left">
 						<text class="next">100次</text>
 					</view>
 					<view class="number-right">
-						<text class="number-price">￥168.00</text>
+						<text class="number-price">{{item.matching.money}}</text>
 					</view>
 				</view>
 			</view>
 			<view class="record-footer">
 				<view class="record-mark">
-            <view class="btns btn">取消订单</view>
+            <view class="btns btn" bindtap='downclick' data-id='{{item.id}}'>取消订单</view>
             <view class="btnss btn">去支付</view>
 				</view>
 			</view>
 		</view>
 	</view>
+
+	<van-dialog id="van-dialog" bind:confirm='cancelclick'/>
 </view>

@@ -1,1 +1,2 @@
 /* pages/templeat/orderSelectPage/orderSelectPage.wxss */
+@import "../../store/orderSelect/orderSelect"

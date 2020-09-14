@@ -1,79 +1,55 @@
 <template name='reelList'>
-
-	<!-- <view class="reel-list reel-imgs" wx:if="{{myreelIndex==0}}">
-		<view class="reel-item" wx:for="{{receiveOrder}}" wx:key="index">
+	<view class="reel-list">
+		<view class="reel-item reel-imgs" wx:if="{{myreelIndex==0}}" wx:for="{{receiveOrder}}" wx:key="index">
 			<van-row>
-				<van-col span="6">
-					<van-row><text>￥</text><text style="font-size:92rpx">{{item.price}}</text></van-row>
-					<van-row><text style="font-size:25rpx">满{{item.condition}}可用</text></van-row>
+				<van-col span="6" offset="1">
+					<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.couponRes.money}}</text></van-row>
+					<van-row><text style="font-size:25rpx">满{{item.couponRes.threshold}}可用</text></van-row>
 				</van-col>
-				<van-col span="11">
+				<van-col span="10">
 					<van-row>
-						<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.type}}</text></view>
+						<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.couponRes.title}}</text></view>
 					</van-row>
-					<van-row style="font-size:25rpx;color:#000;">有效期至:<text>{{item.gitdate}}</text></van-row>
+					<van-row style="font-size:25rpx;color:#000;">有效期至:{{item.updated_at}}</van-row>
 				</van-col>
 				<van-col span="7">
-					<view bindtap="getRell" class="reel-btn"><text wx:if="{{!item.status}}">立即使用</text></view>
-			 <image></image> -->
-				<!-- </van-col>
+					<view class="reel-btn"><text bindtap="getRell">立即使用</text></view>
+				</van-col>
 			</van-row>
 		</view>
-	</view> --> 
-		<view class="reel-list">
-			<view class="reel-item reel-imgs" wx:if="{{myreelIndex==0}}"  wx:for="{{receiveOrder}}" wx:key="index">
-				<van-row>
-					<van-col span="6" offset="1">
-						<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.price}}</text></van-row>
-						<van-row><text style="font-size:25rpx">满{{item.condition}}可用</text></van-row>
-					</van-col>
-					<van-col span="10">
-						<van-row>
-							<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.type}}</text></view>
-						</van-row>
-						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>{{item.gitdate}}</text></van-row>
-					</van-col>
-					<van-col span="7">
-						<view class="reel-btn"><text wx:if="{{!item.status}}" bindtap="getRell">立即使用</text></view>
-					</van-col>
-				</van-row>
-			</view>
+		<view class="reel-item reel-imgs-already" wx:if="{{myreelIndex==1}}" wx:for="{{receiveOrder}}" wx:key="index">
+			<van-row>
+				<van-col span="6" offset="1">
+					<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.couponRes.money}}</text></van-row>
+					<van-row><text style="font-size:25rpx">满{{item.couponRes.threshold}}可用</text></van-row>
+				</van-col>
+				<van-col span="10">
+					<van-row>
+						<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.couponRes.title}}</text></view>
+					</van-row>
+					<van-row style="font-size:25rpx;color:#000;">有效期至:{{item.updated_at}}</van-row>
+				</van-col>
+				<van-col span="7">
+				</van-col>
+			</van-row>
+		</view>
 
-			<view class="reel-item reel-imgs-already" wx:if="{{myreelIndex==1}}"  wx:for="{{receiveOrder}}" wx:key="index">
-				<van-row>
-					<van-col span="6" offset="1">
-						<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.price}}</text></van-row>
-						<van-row><text style="font-size:25rpx">满{{item.condition}}可用</text></van-row>
-					</van-col>
-					<van-col span="10">
-						<van-row>
-							<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.type}}</text></view>
-						</van-row>
-						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>{{item.gitdate}}</text></van-row>
-					</van-col>
-					<van-col span="7">
-						<view class="reel-btn"><text wx:if="{{!item.status}}" bindtap="getRell">立即使用</text></view>
-					</van-col>
-				</van-row>
-			</view>
+		<view class="reel-item reel-imgs-due" wx:if="{{myreelIndex==2}}" wx:for="{{receiveOrder}}" wx:key="index">
+			<van-row>
+				<van-col span="6" offset="1">
+					<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.couponRes.money}}</text></van-row>
+					<van-row><text style="font-size:25rpx">满{{item.couponRes.threshold}}可用</text></van-row>
+				</van-col>
+				<van-col span="10">
+					<van-row>
+						<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.couponRes.title}}</text></view>
+					</van-row>
+					<van-row style="font-size:25rpx;color:#000;">有效期至:{{item.couponRes.updated_at}}</van-row>
+				</van-col>
+				<van-col span="7">
+				</van-col>
+			</van-row>
+		</view>
+	</view>
 
-			<view class="reel-item reel-imgs-due" wx:if="{{myreelIndex==2}}"  wx:for="{{receiveOrder}}" wx:key="index">
-				<van-row>
-					<van-col span="6" offset="1">
-						<van-row><text style="font-size:25rpx">￥</text><text style="font-size:92rpx">{{item.price}}</text></van-row>
-						<van-row><text style="font-size:25rpx">满{{item.condition}}可用</text></van-row>
-					</van-col>
-					<van-col span="10">
-						<van-row>
-							<view style="padding:25rpx 0"><text style="font-size:40rpx">{{item.type}}</text></view>
-						</van-row>
-						<van-row style="font-size:25rpx;color:#000;">有效期至:<text>{{item.gitdate}}</text></van-row>
-					</van-col>
-					<van-col span="7">
-						<view class="reel-btn"><text wx:if="{{!item.status}}" bindtap="getRell">立即使用</text></view>
-					</van-col>
-				</van-row>
-			</view>
-			</view>
-	
 </template>

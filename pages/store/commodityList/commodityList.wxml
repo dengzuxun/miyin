@@ -1,17 +1,10 @@
 <view class="container">
 	<view class="commodityList">
 		<!-- 图片开始 -->
-		<view class="commodityList-img">
-			<swiper>
+		<view class="commodityList-imgs">
 				<block>
-					<swiper-item>
-						<image src="../../../static/imgs/timg1.jpg"></image>
-					</swiper-item>
-					<swiper-item>
-						<image src="../../../static/imgs/timg2.jpg"></image>
-					</swiper-item>
+					<image src="../../../static/imgs/timg2.jpg"></image>
 				</block>
-			</swiper>
 		</view>
 		<!-- 图片结束 -->
 		<!--商品的配置  -->
@@ -19,7 +12,7 @@
 
 			<view class="commodityList-particulars_top">
 				<view class="particulars_top_title">
-					<text class="icon_text">新品</text><text>Aptamil 卓萃白金版 爱他美婴儿宝宝配方奶粉 1段 380g 0-6个月</text>
+					<text class="icon_text">新品</text><text>{{shopdetails.title}}</text>
 				</view>
 
 				<view class="commodityList_price">
@@ -29,7 +22,8 @@
 
 				<view class="particulars_top_share">
 					<view class="top_share_btn">
-						<image src="../../../static/icons/group.png"></image>
+						<van-icon name="share-o" />
+						<image src="../../../static/icons/fenxiang.png"></image>
 						<text>分享</text>
 					</view>
 				</view>
@@ -42,7 +36,7 @@
 			</view>
 
 			<view class="commodityList-particulars_footer">
-				<text>说明</text><text>支持7天无理由退款</text>
+				<text>说明</text><text>{{shopdetails.explain}}</text>
 			</view>
 		</view>
 
@@ -89,14 +83,14 @@
 		<view class="specification">
 				<view class="specification-top">
 					<view class="specification-top-img">
-						<image src="../../../static/imgs/timg1.jpg"></image>
+						<image src="{{capacitychrire.img}}"></image>
 					</view>
 					<view class="specification-top-number">
 							<view class="specification-top-pcier">
-								<text>￥266.00</text>
+								<text>￥{{capacitychrire.money}}</text>
 							</view>
 							<view class="specification-top-residue">
-								<text>剩余3件</text>
+								<text>剩余{{capacitychrire.stock}}件</text>
 							</view>
 					</view>
 				</view>
@@ -104,27 +98,17 @@
 						<view class="center-capacity">
 								<view class="capacity-title">容量</view>
 								<view class="capacity-specification">
-									<view bindtap="capacityClick" wx:key="index" wx:for="{{capacityList}}" data-index="{{index}}" class="{{capacityIndex==index?'actives':''}}"><text>{{item.name}}</text></view>
-									
-								</view>
-						</view>
-						<view class="center-color">
-								<view class="capacity-title">颜色</view>
-								<view class="capacity-specification">
-									<view bindtap="colorClick" wx:key="index" wx:for="{{colorList}}" data-index="{{index}}" class="{{colorIndex==index?'actives':''}}"><text>{{item.name}}</text></view>
+									<view bindtap="capacityClick" wx:key="index" wx:for="{{capacityList}}" data-index="{{index}}" class="{{capacityIndex==index?'actives':''}}"><text>{{item.details}}</text></view>
 								</view>
 						</view>
 				</view>
 				<view class="specification-numbers">
 				<text>购买数量</text>
-					<van-stepper value="{{ 1 }}" input-width="50rpx" button-size="40rpx" bind:change="onChange" disable-input/>
+					<van-stepper value="{{ numberSop }}" input-width="50rpx" button-size="40rpx" bind:change="onChange" disable-input/>
 				</view>
 				<view class="specification-btn">
 					<van-button size="small" color="#FE9B96" bind:click='affirm' round type="info" block>确认订单</van-button>
 				</view>
 		</view>
-
 	</van-popup>
-
-	
 </view>

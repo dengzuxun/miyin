@@ -1,11 +1,10 @@
 import api_request from './https'
 
-// 获取用户信息
-export function getuser (params){
+// 获取用户优惠卷
+export function getusercoupon(params){
   return api_request({
-    url:'/user',
+    url:'/user/coupon',
     method:'GET',
     params
   })
 } 
-

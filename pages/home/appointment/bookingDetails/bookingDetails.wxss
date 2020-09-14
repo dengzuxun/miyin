@@ -71,8 +71,8 @@
 
 .details-order{
   font-size: 25rpx;
+  margin: 0 25rpx;
   margin-top: 20rpx;
-  padding: 20rpx 20rpx;
   color: #333333;
 }
 .details-order>view{
@@ -84,18 +84,17 @@
   justify-content: flex-end;
   font-size: 25rpx;
 }
-.order-no{
-  background-color: #afafaf;
-}
+
 .order-code{
   background-color: #FF928D;
 }
 .order-btns>view{
-    width: 120rpx;
-    text-align: center;
-    padding: 10rpx 25rpx;
-    border-radius: 20rpx;
-    margin-right: 20rpx;
-    color: #fff;
+  width: 120rpx;
+  text-align: center;
+  padding: 10rpx 25rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+  border: 1rpx solid #eee;
+  color: #afafaf;
+  
 }
-

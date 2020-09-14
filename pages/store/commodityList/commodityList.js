@@ -1,88 +1,113 @@
 // pages/store/commodityList/commodityList.js
+
+import {
+  getdetail
+} from '../../../utils/shop'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    selectshow:false,
-    capacityIndex:0,
-    capacitytype:'', //容量
-    colortype:'', //颜色
-    value:'',
-    capacityList:[
-      {"name":"1段"},
-      {"name":"2段"},
-      {"name":"3段"},
-      {"name":"4段"},
-      {"name":"5段"}
-    ],
-    colorIndex:0,
-    colorList:[
-      {"name":"1段"},
-      {"name":"2段"},
-      {"name":"3段"},
-      {"name":"4段"}
-    ]
+    selectshow: false,
+    shopdetails: '', //商品详情
+    capacityIndex: 0, //容量index
+    capacitytype: '', //容量
+    value: '', //规格
+    numberSop: 1, //商品数量
+    capacityList: [], //规格选择
+    freight:null,
+    capacitychrire: '',
   },
   onClose() {
-    console.log("aaa")
-    this.setData({ selectshow: false });
+    this.setData({
+      selectshow: false
+    });
   },
-  immediatelyClick(e){
-    console.log(e)
-      wx.navigateTo({
-        url:'/pages/store/orderSelect/orderSelect'
-      })
+  immediatelyClick(e) {
+    this.setData({
+      selectshow: true
+    })
+    // if (this.value!== '' && this.value !== undefined) {
+    //   console.log("111111")
+    //   wx.navigateTo({
+    //     url: '/pages/store/orderSelect/orderSelect'
+    //   })
+    // }else{
+    //   wx.showToast({
+    //     title: "请选择规格", // 提示的内容
+    //     icon: "none", // 图标，默认success
+    //     duration: 2000, // 提示的延迟时间，默认1500
+    //     mask: false, // 是否显示透明蒙层，防止触摸穿透
+    // })
+    // }
   },
 
   // 规格的确认
-  affirm(){
-    console.log(this.data.capacityList)
-    this.value=  `${ this.data.capacityList[this.capacityIndex].name}-${this.data.colorList[this.colorIndex].name}` 
+  affirm() {
+    let capacitychrire = this.capacitychrire
+    let numberSop = this.data.numberSop
+    console.log(this.data.numberSop)
     this.setData({
-      value: this.value,
-      selectshow:false,
+      selectshow: false,
     })
+      wx.navigateTo({
+        url: '/pages/store/orderSelect/orderSelect?capacitychrire='+JSON.stringify(capacitychrire)+'&number='+numberSop+'&shoptitle='+this.shopdetails.title+'&freight='+this.freight
+      })
+    console.log(this.capacitychrire)
   },
 
   // 打开规格弹窗
-  selectcommodityList(e){
+  selectcommodityList(e) {
     this.setData({
-      selectshow:true
+      selectshow: true
     })
+
+
   },
 
   // 容量的选择
-  capacityClick(e){
-    console.log(e)
+  capacityClick(e) {
     this.capacityIndex = e.currentTarget.dataset.index
+    this.capacitychrire = this.capacityList[e.currentTarget.dataset.index]
     this.setData({
-      capacityIndex:  this.capacityIndex 
-    })
-  },
- // 颜色的选择
-  colorClick(e){
-    // console.log(e.currentTarget.dataset.index)
-    this.colorIndex =e.currentTarget.dataset.index
-    this.setData({
-      colorIndex:this.colorIndex
+      capacityIndex: this.capacityIndex,
+      capacitychrire: this.capacitychrire,
+
     })
   },
 
   // 数量
   onChange(event) {
-    console.log(event.detail);
+    let numberSop = event.detail
+    this.setData({
+      numberSop:numberSop
+    })
   },
-
-
 
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    getdetail({
+      shop_id: '3'
+    }).then((res) => {
+      this.shopdetails = res.data
+      this.capacityList = res.data.normsRes
+      this.capacitychrire = res.data.normsRes[0]
+      this.freight =res.data.freight
+      this.setData({
+        shopdetails: this.shopdetails,
+        capacityList: this.capacityList,
+        capacitychrire: this.capacitychrire,
+        freight:this.freight
+      })
+      console.log(res)
+    }).catch((err) => {
+      console.log(err)
+    })
   },
 
   /**

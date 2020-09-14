@@ -1,67 +1,96 @@
 // pages/store/orderSelect/orderSelect.js
 
-import {getuseraddressdefault} from '../../../utils/site'
+
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      show:false,
-      radio: 0,
-      sitedefault:null,
-      icon: {
-        normal: '//img.yzcdn.cn/icon-normal.png',
-        active: '//img.yzcdn.cn/icon-active.png',
+  
+    siteList: null,
+    icon: {
+      normal: '//img.yzcdn.cn/icon-normal.png',
+      active: '//img.yzcdn.cn/icon-active.png',
+    },
+    selectIndex: 0,
+    select: [{
+        "name": "快递配送",
+        "pag": 0
       },
-      selectIndex:0,
-      select:[
-        {"name":"快递配送","pag":0},
-        {"name":"到店自取","pag":1},
-       ]
-    },
+      {
+        "name": "到店自取",
+        "pag": 1
+      },
+    ],
+    parentData: {}, //父级来商品的数据
+    numbers: null, //商品数量
+    shoptitle: null,
+    coupon: null,
+    freight:null,
+    orderSelectData:{}
+  },
 
-    // 切换领取货物的方式
-    selectClick(e){
-      var index=e.target.dataset.index
-      this.setData({
-        selectIndex:index
-        })
-    },  
-// 点击地址选项
-select(){
-  this.setData({
-    show:true
-    })
-},
-// 地址选项发送改变时触发
-    onChange(event) {
-      this.setData({
-        radio: event.detail,
-        show:false
-      });
-    },
-    //取消地址选择
-    siseIcon(){
-      this.setData({
-        show:false
-      });
-    },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    getuseraddressdefault({
-      open_id:"openid"
-    }).then((res)=>{
-        this.sitedefault = res.data
-        this.setData({
-          sitedefault: this.sitedefault
-        })
+  // 切换领取货物的方式
+  selectClick(e) {
+    var index = e.target.dataset.index
+    this.setData({
+      selectIndex: index
     })
   },
 
-  
+
+
+ 
+
+
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+
+  onLoad: function (options) {
+
+    console.log(options)
+    // 父级来商品的数据
+    this.parentData = JSON.parse(options.capacitychrire) //获取选择的规格 
+    this.numbers = options.number //获取数量
+    this.shoptitle = options.shoptitle //获取商品名称
+    this.freight = options.freight
+    this.setData({
+      parentData: this.parentData,
+      numbers: this.numbers,
+      shoptitle: this.shoptitle,
+      freight:this.freight
+    })
+    const {
+      selectIndex,
+      parentData,
+      coupon,
+      numbers,
+      shoptitle,
+      totalpicer,
+      freight
+    } = this.data;
+    this.setData({
+      orderSelectData: {
+        selectIndex,
+        parentData,
+        coupon,
+        numbers,
+        shoptitle,
+        totalpicer,
+        freight
+      }
+    })
+
+    
+
+    
+
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

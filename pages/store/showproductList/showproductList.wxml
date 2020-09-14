@@ -48,6 +48,7 @@
 				</view>
 			</view>
 			<van-toast duration="1000" id="van-toast" />
+			<view>已经没有了</view>
 		</view>
 	</view>
 

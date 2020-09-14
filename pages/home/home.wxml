@@ -74,7 +74,7 @@
 		</view>
 	</view>
 	<view class="home-content">
-	<van-sticky>
+	<!-- <van-sticky>
 		<scroll-view class="typeIndex" scroll-x>
 			<view class="box">
 				<text bindtap="homeTypeclick" data-index='{{index}}' data-Id="{{item.id}}" wx:for="{{homeType}}" wx:key="index" class="{{homeTypeIndex==index?'box1':''}}">{{item.name}}</text>
@@ -92,6 +92,31 @@
 						</view>
 						<view class="essay-img">
 							<image src="{{item.img}}"></image>
+						</view>
+					</navigator>
+				</view>
+			</view>
+		</scroll-view> -->
+
+
+		<van-sticky>
+		<scroll-view class="typeIndex" scroll-x>
+			<view class="box">
+				<text bindtap="homeTypeclick" data-index='{{index}}' data-Id="{{item.id}}" wx:for="{{homeType}}" wx:key="index" class="{{homeTypeIndex==index?'box1':''}}">{{item.name}}</text>
+			</view>
+		</scroll-view>
+	</van-sticky>
+
+		<scroll-view>
+			<view class="essay">
+				<view class="essay-content" bindtap="articleClick" wx:for="{{21}}" wx:key="index">
+					<navigator url="/pages/home/article/article" open-type="navigate">
+						<view class="essay-top">
+							<text class="essay-title">{{item.name}}</text>
+							<text>dasd</text>
+						</view>
+						<view class="essay-img">
+							<image src="../../static/imgs/timg2.jpg"></image>
 						</view>
 					</navigator>
 				</view>

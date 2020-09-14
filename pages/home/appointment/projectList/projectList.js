@@ -1,12 +1,33 @@
 // pages/home/appointment/projectList/projectList.js
-import {get_projectDetail} from '../../../../utils/homeapi/homeapi'
+import {
+  get_projectDetail
+} from '../../../../utils/homeapi/homeapi'
+import {
+  getuser
+} from '../../../../utils/api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    projectDetails:''
+    projectDetails: '',
+    userinfon:null,
+  },
+// 预约项目
+  appointments(e){
+    // console.log(e.target.dataset.id)
+    wx.navigateTo({
+      url: '/pages/home/appointment/projectList/swimming/swimming?project_id='+JSON.stringify(this.data.projectDetails),
+    })
+  },
+
+
+  // 购买套餐
+  buyadd(e){
+    wx:wx.navigateTo({
+      url: '/pages/home/appointment/projectList/swimPackage/swimPackage',
+    })
   },
 
   /**
@@ -14,19 +35,28 @@ Page({
    */
   onLoad: function (options) {
 
+    // 获取项目详情
     get_projectDetail({
-      open_id:"openid",
-      project_id:3
+        open_id: "openid",
+        project_id: 3
+      }).then((res) => {
+        this.setData({
+          projectDetails: res.data
+        })
+        console.log(res)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+    console.log(options)
+
+    getuser({
+      open_id:"openid"
     }).then((res)=>{
       this.setData({
-        projectDetails:res.data
+        userinfon:res.data
       })
-      console.log(res)
     })
-    .catch((err)=>{
-      console.log(err)
-    })
-    console.log(options)
   },
 
   /**
